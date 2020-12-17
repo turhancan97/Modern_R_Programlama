@@ -1,0 +1,172 @@
+---
+title: "Matris"
+output: html_notebook
+---
+
+# 1. Matris nedir?
+
+Matrisler, bir veya birden fazla satir ve sutundan olusan dizilerdir.
+
+# 2. Matris Bicimlendirme
+
+## Matris Olusturma
+
+```{r}
+v1<- c(1,2,3,4,5)
+v2<- c(2,3,4,5,6)
+v3<- c(3,4,5,6,7)
+v4<- c(4,5,6,7,8)
+
+v<-cbind(v1,v2,v3,v4)
+
+matrix(1:9,nrow = 3,ncol = 3,byrow = TRUE)
+
+matrix(c(1,2,3,11,22,33),2,3)
+
+matrix(c(1,2,3,11,22,33),2)
+```
+
+## Matris Boyutlari ve Frekans Tablosu
+```{r}
+m<-matrix(c(1,2,3,11,22,33,111,222,333),3,3)
+dim(m)
+x<-matrix(rep(1:3,3),3,3)
+table(m)
+```
+
+## Matris Birlestirme
+```{r}
+MA<-rnorm(16)
+MA<-matrix(MA,4,4)
+
+MB<-rnorm(16,90,10)
+MB<-matrix(MB,4,4)
+
+rbind(MA,MB)
+cbind(MA,MB)
+
+MA[1:2,1:2]
+MB[3:4,3:4]
+
+cbind(MA[1:2,1:2],MB[3:4,3:4])
+```
+
+## Matris Isimlendirme
+```{r}
+v1<- c(1,2,3,4,5)
+v2<- c(2,3,4,5,6)
+v3<- c(3,4,5,6,7)
+v4<- c(4,5,6,7,8)
+
+v<-cbind(v1,v2,v3,v4)
+colnames(v) <- c("bir","iki","uc","dort")
+rownames(v) <- c("bir","iki","uc","dort","bes")
+
+dev_m <- matrix(1:10000,ncol = 5,nrow=500)
+
+rownames(dev_m)<-c(paste("musteri_id",1:500,sep ="_"))
+```
+
+# 3. Matris Eleman Islemleri
+
+## Matris Indeksi ve Eleman Secimi
+```{r}
+M<-matrix(c(1,2,11,22,111,222,1111,2222),nrow=4,ncol = 2,byrow = TRUE)
+
+colnames(M) <- c("bir","iki")
+rownames(M) <- c("rakam","onlar","yuzle","binler")
+
+# Eleman Secme
+
+M[1,1]
+M[3,1]
+M[2,2]
+
+# Satir Secme
+M[1,]
+M[1:2,]
+M[c(1,4),]
+
+# Sutun Secme
+M[,1]
+M[,1:2]
+
+m<-matrix(rnorm(25),10,10)
+m[1:5,5:7]
+
+colnames(m) <- c(paste("sutun",1:10,sep = "-"))
+rownames(m) <- c(paste("satir",1:10,sep = "-"))
+m
+m[,"sutun-2"]
+m["satir-2",]
+
+m<-matrix(1:1000,50,10)
+dim(m)
+colnames(m) <- c(paste("degisken",1:10,sep = "_"))
+
+m[,"degisken_1"]
+mean(m[,"degisken_1"])
+as.character(round(sqrt(mean(m[,"degisken_1"]))))
+colnames(m)[1]<-as.character(sqrt(round(sqrt(mean(m[,"degisken_1"])))))
+colnames(m)<-as.character(round(sqrt(apply(m,2,mean))))
+```
+
+## Kosullu Eleman Secimi
+```{r}
+m<- matrix(1:25,5,5)
+m
+m[,1] > 2
+m[m[,1] > 2,]
+m[m[,1] > 2,1]
+####
+mean(m[,1])
+m[m[,1]>mean(m[,1]),1]
+####
+mean(m[,4])
+m[m[,2]<mean(m[,4]),2]
+```
+
+# 4. Matris Hesaplama
+
+## Matematiksel Islemler
+```{r}
+A<-matrix(1:9,3,3)
+A
+B<-matrix(1:9,3,3)
+A+B
+A-B
+A/B
+A*B
+A*8
+A[1,2]+B[3,3] - 10
+sum(A)
+mean(A)
+rowSums(A)
+colSums(A)
+rowMeans(A)
+
+```
+
+## Apply Uygulamasi
+```{r}
+apply(A, 1,mean)
+apply(A, 2,mean)
+```
+
+## Lineer Cebir Islemleri
+```{r}
+
+A<-matrix(1:9,3,3)
+diag(A)# Kosegen Elemanlari
+sum(diag(A)) # Iz
+I <- diag(c(1,1,1)) # Birim Matrix
+matrix(c(2,1,3,1,2,1,3,1,2),3,3) # Simetrik Matrix
+t(A) # Trasnpoz
+det(A) # Determinant
+
+A<-matrix(1:9,3,3)
+B<-matrix(1:9,3,3)
+A %*% B # Matris Carpim
+solve(matrix(c(3,4,5,8),2,2)) # Matrisin tersi
+```
+

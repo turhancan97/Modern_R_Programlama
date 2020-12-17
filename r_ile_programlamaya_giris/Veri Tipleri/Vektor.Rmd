@@ -1,0 +1,184 @@
+---
+title: "Vektorler"
+output: html_notebook
+---
+
+# 1. Vektor Nedir?
+
+Vektorler iki tiptir. Atomic ve List
+
+Her vektorun iki temel ozelligi vardir. Bunlar:
+
+* Faktorler
+* Tarih Zaman
+* Data Frame
+* Tibbles
+
+## Onemli Atomik Vektorler
+```{r}
+q<-c(TRUE,FALSE,NA)
+
+# integer 6 numeric
+
+a<- 1
+b<- 1L
+
+# Character
+
+c<-"Turhan"
+```
+
+# 2. Vektor Bicimlendirme
+
+## Vektor Olusturma
+```{r}
+a<-c(1,2,3,4)
+b<-c("a","b","c")
+c<-1:10
+```
+
+## Vektor Birlestirme
+```{r}
+v<-1:10
+y<-2:11
+v+y
+z<-1:5
+v+z
+c(v,z,y)
+rbind(v,y)
+cbind(v,y)
+```
+
+## Vektor Isimlendirme
+```{r}
+a<-c(x=1,y=2,z=3)
+a
+```
+
+## Vektor Tipleri ve Tipler Arasi Donusum
+
+### Vektor Tipleri
+```{r}
+is.logical(a)
+is.integer(a)
+is.double(a)
+is.numeric(a)
+is.character(a)
+is.atomic(a)
+is.list(a)
+is.vector(a)
+```
+
+### Vektorler arasi Donusum
+
+```{r}
+tf<-c("T","F")
+tf<-as.logical(tf)
+a<-99
+a<-as.character(a)
+a<-99
+a<-as.integer(a)
+a<-c(10,10,10,20,20,30,40,40)
+a<-factor(a)
+# a<-as.numeric(a) # factorden numerige çevirmek indexe göre ceviriyor.
+# Bu sebeple asagidaki gibi yapilmalidir
+as.numeric(as.character(a))
+```
+
+# 3. Vektor Eleman Islemleri
+
+## Vektor Indeksi ve Eleman Secimi
+```{r}
+vektor<-rnorm(30)
+vektor[1]
+vektor[2]
+
+```
+
+## Birden fazla eleman secmek
+
+```{r}
+vektor[c(2,3,4)]
+```
+
+## Seri Olarak Eleman Secmek
+```{r}
+vektor[1:10]
+print("--------------")
+vektor[20:30]
+```
+
+## Indeks ile Deger Atamak
+```{r}
+vektor[1]<-1
+vektor
+```
+
+## Toplu Deger Atamak
+```{r}
+vektor[c(2,3,4)]<-c(2,3,4)
+
+vektor
+
+vektor[c(1:10)]<-0
+
+vektor
+```
+
+## Isimlendirilmis Vektorlerden Eleman Secmek
+```{r}
+v<-c(x=1,y=2,z=3)
+
+v["x"]
+v["y"]
+v[c("x","y")]
+```
+
+## Kosullu Eleman Secimi
+```{r}
+vektor
+
+vektor[vektor>0]
+
+vektor[vektor>=0]
+
+vektor[vektor > 0 & vektor < 1]
+
+```
+
+## Vektor Elemanlarinin Silinmesi
+```{r}
+v<-1:10
+
+# v<-NULL # Tum elemanlara Null Atanir
+ 
+v<-v[2:10]
+
+v
+```
+
+# Vektorel Hesaplamalar
+
+## Matematiksel Islemler
+
+```{r}
+v<-1:10
+y<-2:11
+v+y
+v-y
+v*y
+v/y
+sqrt(v)
+sum(v)
+v^2
+v^3
+```
+
+## Istatiksel Islemler
+```{r}
+mean(v)
+median(v)
+min(v)
+max(v)
+cumsum(v)
+```
