@@ -170,3 +170,25 @@ A %*% B # Matris Carpim
 solve(matrix(c(3,4,5,8),2,2)) # Matrisin tersi
 ```
 
+# 5. Matris Formunda Regresyon Uygulamasi
+
+y = a0 + a1X1 + ..... + anXn
+
+a = [X'X]^-1 X'y
+
+```{r}
+library(readr)
+hsb <- read_table2("hsb.txt")
+hsb<-na.omit(hsb)
+y <- matrix(hsb$write,ncol=1)
+# y
+x<- as.matrix(cbind(1,hsb$math,hsb$science,hsb$socst,hsb$female))
+
+n<-nrow(x)
+p<-ncol(x)
+
+solve(t(x)%*%x)%*%t(x)%*%y
+
+# summary(lm(write~math+science+socst+female+hsb))
+```
+

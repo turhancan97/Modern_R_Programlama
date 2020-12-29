@@ -1,0 +1,71 @@
+---
+title: "apply()"
+output: html_notebook
+---
+# apply()
+
+```{r}
+apply(matrix(1:9,3,3),1,mean)
+
+library(ggplot2)
+mpg
+fap <- mpg[,c("displ","cyl","cty")]
+apply(fap,1,sum)
+```
+
+```{r}
+sum(mpg$displ)
+sum(fap[1,])
+```
+
+```{r}
+bos <- NULL
+for (i in 1:nrow(fap)){
+  a <- sum(fap[i,])
+  bos <- rbind(bos,a)
+}
+source("for.R")
+```
+
+# Karsilastirma
+
+```{r}
+library(microbenchmark)
+
+microbenchmark(source("for.R"),apply(fap,1,sum),times=100)
+```
+
+## lapply()
+
+```{r}
+l<-list(a=rnorm(90),b=rbeta(10,1,2),c=1:500)
+lapply(l,mean)
+```
+
+## sapply()
+
+```{r}
+l<-list(a=rnorm(90),b=rbeta(10,1,2),c=1:500)
+sapply(l,mean)
+
+```
+
+## vapply()
+
+```{r}
+vapply(1:10,sqrt,double(1))
+```
+
+## tapply
+
+```{r}
+str(mpg)
+tapply(mpg$cyl,mpg$class,mean)
+```
+
+## by()
+
+```{r}
+by(mpg[,c("displ","cty","hwy")],mpg$cyl,colMeans)
+```
+

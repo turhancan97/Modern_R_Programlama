@@ -1,0 +1,155 @@
+---
+title: "R'da Karakter ile Calismak"
+output: html_notebook
+---
+
+# 1. Karakter Olusturmak
+
+## Bos Karakter
+
+```{r}
+bos_string <- ""
+class(bos_string)
+
+ornek <- character(0)
+str(ornek)
+ornek[1]
+ornek[1] <- "Bu Birinci Degerdir"
+ornek
+ornek[2] <- "Ikinci Deger"
+ornek
+is.character(ornek)
+
+as.character(9)
+```
+
+## paste() ve digerleri
+
+```{r}
+metin <- "Bu bir Karakterdir"
+karakter <- "Bu da Karakterdir"
+c("Karakter")
+
+paste(metin)
+paste("Bu bir Karakterdir")
+paste("9999")
+paste(metin,karakter)
+paste(1)
+paste(metin,karakter,sep="-------")
+
+print("Karakter",quote = FALSE)
+noquote("karakter")
+
+cat("Selam")
+
+toString(99)
+a<-toString(c("abc",99,TRUE,NA,sum(1:99)))
+a
+```
+
+# 2. Temel Karakter Islemleri
+
+```{r}
+nchar("Turhan Can Kargin")
+nchar(c("ali","veli","ahmet"))
+length(c("ali","veli","ahmet"))
+length("Turhan Can Kargin")
+
+tolower("BU Buyuk Bir CUMLE")
+toupper("bu kucuk Bir CUMle")
+toupper(c("ali","veli","ahmet"))
+
+chartr("l","L","lalelilen lale aldim")
+
+renkler<- colors()[1:6]
+abbreviate(renkler)
+abbreviate(renkler,minlength = 5)
+
+substr("Turhan",2,4)
+x<-c("bir","iki","uc")
+substr(x,2,2) <- "#"
+
+# grep()
+
+v<-c("bir","uc","onbir","bir","yirmi","otuzbir")
+grep("bir",v)
+
+#sub()
+
+sub("bir","iki",v)
+```
+
+# 3. Vektorel Islemler
+
+```{r}
+sirket_a <- c("R","sql","Python","SPSS","SAS")
+sirket_b <- c("sql","R","Python","SPSS","Excel")
+sirket_c <- c("R","sql","Python","SAS","SPSS")
+
+union(sirket_b,sirket_a)
+
+intersect(sirket_a,sirket_b)
+
+setdiff(sirket_a,sirket_b)
+setdiff(sirket_c,sirket_a)
+
+setequal(sirket_a,sirket_c)
+
+identical(sirket_a,sirket_c)
+identical(sirket_a,sirket_a)
+```
+
+# 4. String ile karakter Islemleri
+
+## str_detect(): eslesme saptama islemleri
+
+```{r}
+library(stringr)
+v<- c("bir", "berber","birbir","berbere","gelme","burasi","bana anca yeter")
+str_detect(v,"bir")
+str_which(v,"bir")
+str_count(v,"bir")
+str_locate(v,"bir")
+str_locate_all(v,"bir")
+```
+
+## str_sub(): karakter alt kume
+
+```{r}
+str_sub(v,1,3)
+birseyler <- c("buyukveri","makineogrenmesiveveri","istatistikveveri","borcamveri")
+str_sub(birseyler,-4,-1)
+substring(birseyler,-4,-1)
+```
+
+## str_length(): karakter uzunluk
+
+```{r}
+nchar(v)
+str_length(v)
+
+a_b <- factor(c(1,1,1,0,0,0),labels = c("bir","iki"))
+a_b
+
+# nchar(a_b) ## Hata verir
+str_length(a_b)
+```
+
+## str_replace(): eslesme degistirme
+
+```{r}
+str_sub(v,1,3)
+
+str_replace(v,"bir","--")
+str_replace_all(v,"bir","--")
+
+# str_to_lower()
+# str_to_upper()
+```
+
+
+## str_c(): karakter birlestirme
+
+```{r}
+str_c("ali","ata","bakmayi","birak","millet","uzaya","gidiyor",sep = "-")
+```

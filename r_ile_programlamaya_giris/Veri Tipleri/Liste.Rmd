@@ -1,0 +1,85 @@
+---
+title: "Listeler"
+output: html_notebook
+---
+
+# 1. Liste Nedir?
+
+Birden farkli veri tipini barindiran bir veri tipi.
+
+# 2. Liste Bicimlendirme
+
+## Liste Olusturma
+
+```{r}
+list("SuperNova","String",1:10,57,10.5,FALSE)
+```
+
+## Liste Birlestirme
+
+```{r}
+liste_1<-list("SuperNova","String",1:10,57,10.5,FALSE)
+liste_2<-list("ABC")
+c(liste_1,liste_2)
+```
+
+## Liste Isimlendirme
+
+```{r}
+liste<-list(c("ali","veli"),matrix(1:9,3,3),list("olabilir"),1:10)
+names(liste)<-c("a","b","c")
+liste
+```
+
+# 3. Liste Eleman Islemleri
+
+## Liste Indeksi ve Eleman Secimi
+
+```{r}
+liste[1]
+liste$b
+```
+
+## Liste Eleman Degistirme
+
+```{r}
+liste[4]<-"d"
+liste[4]
+
+liste[1]<-"Yeni Eleman"
+```
+
+## Listeyi Vektore Degistirme
+
+```{r}
+la <- list(1:15)
+lb <- list(10:14) 
+
+a<-unlist(la)
+typeof(a)
+is.vector(a)
+
+b<-unlist(lb)
+typeof(b)
+is.vector(b)
+```
+
+# 4. Liste Hesaplamalar
+
+```{r}
+unlist(la)*2
+liste$b*2
+tolower(liste$a)
+```
+
+# 5. Liste Uzerinde Apply Uygulamalari
+
+```{r}
+l<-list(bir=1:10,karesel=(1:10)^2,kup=(1:10)^3)
+l
+lapply(l,mean)
+lapply(l,sum)
+lapply(l,function(x) x^4)
+lapply(c(1,2,3),function(x) matrix(rnorm(9),3,3))
+```
+

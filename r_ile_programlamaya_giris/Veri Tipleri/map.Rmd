@@ -1,0 +1,34 @@
+---
+title: "map"
+output: html_notebook
+---
+
+# map()
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(purrr)
+mpg
+mapp <- mpg[,c("displ","cty","hwy")]
+map_dbl(mapp,mean)
+```
+
+```{r}
+mtcars %>%
+  split(.$cyl) %>%
+  map(~lm(mpg~wt,data=.))
+```
+
+# Modern Data Frame: Tibble
+
+## Yazdirma Sekli
+
+```{r}
+# data.frame(a=1:10000,b=1:10000)
+
+tibble(a=1:10000,b=1:10000)
+
+as_tibble(iris)
+```
+

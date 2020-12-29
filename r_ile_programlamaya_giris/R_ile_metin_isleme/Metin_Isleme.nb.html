@@ -11,7 +11,7 @@
 
 
 
-<title>Matris</title>
+<title>R’da Karakter ile Calismak</title>
 
 <script>/*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */
 !function(a,b){"object"==typeof module&&"object"==typeof module.exports?module.exports=a.document?b(a,!0):function(a){if(!a.document)throw new Error("jQuery requires a window with a document");return b(a)}:b(a)}("undefined"!=typeof window?window:this,function(a,b){var c=[],d=c.slice,e=c.concat,f=c.push,g=c.indexOf,h={},i=h.toString,j=h.hasOwnProperty,k={},l="1.11.3",m=function(a,b){return new m.fn.init(a,b)},n=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,o=/^-ms-/,p=/-([\da-z])/gi,q=function(a,b){return b.toUpperCase()};m.fn=m.prototype={jquery:l,constructor:m,selector:"",length:0,toArray:function(){return d.call(this)},get:function(a){return null!=a?0>a?this[a+this.length]:this[a]:d.call(this)},pushStack:function(a){var b=m.merge(this.constructor(),a);return b.prevObject=this,b.context=this.context,b},each:function(a,b){return m.each(this,a,b)},map:function(a){return this.pushStack(m.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return this.pushStack(d.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},eq:function(a){var b=this.length,c=+a+(0>a?b:0);return this.pushStack(c>=0&&b>c?[this[c]]:[])},end:function(){return this.prevObject||this.constructor(null)},push:f,sort:c.sort,splice:c.splice},m.extend=m.fn.extend=function(){var a,b,c,d,e,f,g=arguments[0]||{},h=1,i=arguments.length,j=!1;for("boolean"==typeof g&&(j=g,g=arguments[h]||{},h++),"object"==typeof g||m.isFunction(g)||(g={}),h===i&&(g=this,h--);i>h;h++)if(null!=(e=arguments[h]))for(d in e)a=g[d],c=e[d],g!==c&&(j&&c&&(m.isPlainObject(c)||(b=m.isArray(c)))?(b?(b=!1,f=a&&m.isArray(a)?a:[]):f=a&&m.isPlainObject(a)?a:{},g[d]=m.extend(j,f,c)):void 0!==c&&(g[d]=c));return g},m.extend({expando:"jQuery"+(l+Math.random()).replace(/\D/g,""),isReady:!0,error:function(a){throw new Error(a)},noop:function(){},isFunction:function(a){return"function"===m.type(a)},isArray:Array.isArray||function(a){return"array"===m.type(a)},isWindow:function(a){return null!=a&&a==a.window},isNumeric:function(a){return!m.isArray(a)&&a-parseFloat(a)+1>=0},isEmptyObject:function(a){var b;for(b in a)return!1;return!0},isPlainObject:function(a){var b;if(!a||"object"!==m.type(a)||a.nodeType||m.isWindow(a))return!1;try{if(a.constructor&&!j.call(a,"constructor")&&!j.call(a.constructor.prototype,"isPrototypeOf"))return!1}catch(c){return!1}if(k.ownLast)for(b in a)return j.call(a,b);for(b in a);return void 0===b||j.call(a,b)},type:function(a){return null==a?a+"":"object"==typeof a||"function"==typeof a?h[i.call(a)]||"object":typeof a},globalEval:function(b){b&&m.trim(b)&&(a.execScript||function(b){a.eval.call(a,b)})(b)},camelCase:function(a){return a.replace(o,"ms-").replace(p,q)},nodeName:function(a,b){return a.nodeName&&a.nodeName.toLowerCase()===b.toLowerCase()},each:function(a,b,c){var d,e=0,f=a.length,g=r(a);if(c){if(g){for(;f>e;e++)if(d=b.apply(a[e],c),d===!1)break}else for(e in a)if(d=b.apply(a[e],c),d===!1)break}else if(g){for(;f>e;e++)if(d=b.call(a[e],e,a[e]),d===!1)break}else for(e in a)if(d=b.call(a[e],e,a[e]),d===!1)break;return a},trim:function(a){return null==a?"":(a+"").replace(n,"")},makeArray:function(a,b){var c=b||[];return null!=a&&(r(Object(a))?m.merge(c,"string"==typeof a?[a]:a):f.call(c,a)),c},inArray:function(a,b,c){var d;if(b){if(g)return g.call(b,a,c);for(d=b.length,c=c?0>c?Math.max(0,d+c):c:0;d>c;c++)if(c in b&&b[c]===a)return c}return-1},merge:function(a,b){var c=+b.length,d=0,e=a.length;while(c>d)a[e++]=b[d++];if(c!==c)while(void 0!==b[d])a[e++]=b[d++];return a.length=e,a},grep:function(a,b,c){for(var d,e=[],f=0,g=a.length,h=!c;g>f;f++)d=!b(a[f],f),d!==h&&e.push(a[f]);return e},map:function(a,b,c){var d,f=0,g=a.length,h=r(a),i=[];if(h)for(;g>f;f++)d=b(a[f],f,c),null!=d&&i.push(d);else for(f in a)d=b(a[f],f,c),null!=d&&i.push(d);return e.apply([],i)},guid:1,proxy:function(a,b){var c,e,f;return"string"==typeof b&&(f=a[b],b=a,a=f),m.isFunction(a)?(c=d.call(arguments,2),e=function(){return a.apply(b||this,c.concat(d.call(arguments)))},e.guid=a.guid=a.guid||m.guid++,e):void 0},now:function(){return+new Date},support:k}),m.each("Boolean Number String Function Array Date RegExp Object Error".split(" "),function(a,b){h["[object "+b+"]"]=b.toLowerCase()});function r(a){var b="length"in a&&a.length,c=m.type(a);return"function"===c||m.isWindow(a)?!1:1===a.nodeType&&b?!0:"array"===c||0===b||"number"==typeof b&&b>0&&b-1 in a}var s=function(a){var b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u="sizzle"+1*new Date,v=a.document,w=0,x=0,y=ha(),z=ha(),A=ha(),B=function(a,b){return a===b&&(l=!0),0},C=1<<31,D={}.hasOwnProperty,E=[],F=E.pop,G=E.push,H=E.push,I=E.slice,J=function(a,b){for(var c=0,d=a.length;d>c;c++)if(a[c]===b)return c;return-1},K="checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",L="[\\x20\\t\\r\\n\\f]",M="(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",N=M.replace("w","w#"),O="\\["+L+"*("+M+")(?:"+L+"*([*^$|!~]?=)"+L+"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|("+N+"))|)"+L+"*\\]",P=":("+M+")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|"+O+")*)|.*)\\)|)",Q=new RegExp(L+"+","g"),R=new RegExp("^"+L+"+|((?:^|[^\\\\])(?:\\\\.)*)"+L+"+$","g"),S=new RegExp("^"+L+"*,"+L+"*"),T=new RegExp("^"+L+"*([>+~]|"+L+")"+L+"*"),U=new RegExp("="+L+"*([^\\]'\"]*?)"+L+"*\\]","g"),V=new RegExp(P),W=new RegExp("^"+N+"$"),X={ID:new RegExp("^#("+M+")"),CLASS:new RegExp("^\\.("+M+")"),TAG:new RegExp("^("+M.replace("w","w*")+")"),ATTR:new RegExp("^"+O),PSEUDO:new RegExp("^"+P),CHILD:new RegExp("^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\("+L+"*(even|odd|(([+-]|)(\\d*)n|)"+L+"*(?:([+-]|)"+L+"*(\\d+)|))"+L+"*\\)|)","i"),bool:new RegExp("^(?:"+K+")$","i"),needsContext:new RegExp("^"+L+"*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\("+L+"*((?:-\\d)?\\d*)"+L+"*\\)|)(?=[^-]|$)","i")},Y=/^(?:input|select|textarea|button)$/i,Z=/^h\d$/i,$=/^[^{]+\{\s*\[native \w/,_=/^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,aa=/[+~]/,ba=/'|\\/g,ca=new RegExp("\\\\([\\da-f]{1,6}"+L+"?|("+L+")|.)","ig"),da=function(a,b,c){var d="0x"+b-65536;return d!==d||c?b:0>d?String.fromCharCode(d+65536):String.fromCharCode(d>>10|55296,1023&d|56320)},ea=function(){m()};try{H.apply(E=I.call(v.childNodes),v.childNodes),E[v.childNodes.length].nodeType}catch(fa){H={apply:E.length?function(a,b){G.apply(a,I.call(b))}:function(a,b){var c=a.length,d=0;while(a[c++]=b[d++]);a.length=c-1}}}function ga(a,b,d,e){var f,h,j,k,l,o,r,s,w,x;if((b?b.ownerDocument||b:v)!==n&&m(b),b=b||n,d=d||[],k=b.nodeType,"string"!=typeof a||!a||1!==k&&9!==k&&11!==k)return d;if(!e&&p){if(11!==k&&(f=_.exec(a)))if(j=f[1]){if(9===k){if(h=b.getElementById(j),!h||!h.parentNode)return d;if(h.id===j)return d.push(h),d}else if(b.ownerDocument&&(h=b.ownerDocument.getElementById(j))&&t(b,h)&&h.id===j)return d.push(h),d}else{if(f[2])return H.apply(d,b.getElementsByTagName(a)),d;if((j=f[3])&&c.getElementsByClassName)return H.apply(d,b.getElementsByClassName(j)),d}if(c.qsa&&(!q||!q.test(a))){if(s=r=u,w=b,x=1!==k&&a,1===k&&"object"!==b.nodeName.toLowerCase()){o=g(a),(r=b.getAttribute("id"))?s=r.replace(ba,"\\$&"):b.setAttribute("id",s),s="[id='"+s+"'] ",l=o.length;while(l--)o[l]=s+ra(o[l]);w=aa.test(a)&&pa(b.parentNode)||b,x=o.join(",")}if(x)try{return H.apply(d,w.querySelectorAll(x)),d}catch(y){}finally{r||b.removeAttribute("id")}}}return i(a.replace(R,"$1"),b,d,e)}function ha(){var a=[];function b(c,e){return a.push(c+" ")>d.cacheLength&&delete b[a.shift()],b[c+" "]=e}return b}function ia(a){return a[u]=!0,a}function ja(a){var b=n.createElement("div");try{return!!a(b)}catch(c){return!1}finally{b.parentNode&&b.parentNode.removeChild(b),b=null}}function ka(a,b){var c=a.split("|"),e=a.length;while(e--)d.attrHandle[c[e]]=b}function la(a,b){var c=b&&a,d=c&&1===a.nodeType&&1===b.nodeType&&(~b.sourceIndex||C)-(~a.sourceIndex||C);if(d)return d;if(c)while(c=c.nextSibling)if(c===b)return-1;return a?1:-1}function ma(a){return function(b){var c=b.nodeName.toLowerCase();return"input"===c&&b.type===a}}function na(a){return function(b){var c=b.nodeName.toLowerCase();return("input"===c||"button"===c)&&b.type===a}}function oa(a){return ia(function(b){return b=+b,ia(function(c,d){var e,f=a([],c.length,b),g=f.length;while(g--)c[e=f[g]]&&(c[e]=!(d[e]=c[e]))})})}function pa(a){return a&&"undefined"!=typeof a.getElementsByTagName&&a}c=ga.support={},f=ga.isXML=function(a){var b=a&&(a.ownerDocument||a).documentElement;return b?"HTML"!==b.nodeName:!1},m=ga.setDocument=function(a){var b,e,g=a?a.ownerDocument||a:v;return g!==n&&9===g.nodeType&&g.documentElement?(n=g,o=g.documentElement,e=g.defaultView,e&&e!==e.top&&(e.addEventListener?e.addEventListener("unload",ea,!1):e.attachEvent&&e.attachEvent("onunload",ea)),p=!f(g),c.attributes=ja(function(a){return a.className="i",!a.getAttribute("className")}),c.getElementsByTagName=ja(function(a){return a.appendChild(g.createComment("")),!a.getElementsByTagName("*").length}),c.getElementsByClassName=$.test(g.getElementsByClassName),c.getById=ja(function(a){return o.appendChild(a).id=u,!g.getElementsByName||!g.getElementsByName(u).length}),c.getById?(d.find.ID=function(a,b){if("undefined"!=typeof b.getElementById&&p){var c=b.getElementById(a);return c&&c.parentNode?[c]:[]}},d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){return a.getAttribute("id")===b}}):(delete d.find.ID,d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){var c="undefined"!=typeof a.getAttributeNode&&a.getAttributeNode("id");return c&&c.value===b}}),d.find.TAG=c.getElementsByTagName?function(a,b){return"undefined"!=typeof b.getElementsByTagName?b.getElementsByTagName(a):c.qsa?b.querySelectorAll(a):void 0}:function(a,b){var c,d=[],e=0,f=b.getElementsByTagName(a);if("*"===a){while(c=f[e++])1===c.nodeType&&d.push(c);return d}return f},d.find.CLASS=c.getElementsByClassName&&function(a,b){return p?b.getElementsByClassName(a):void 0},r=[],q=[],(c.qsa=$.test(g.querySelectorAll))&&(ja(function(a){o.appendChild(a).innerHTML="<a id='"+u+"'></a><select id='"+u+"-\f]' msallowcapture=''><option selected=''></option></select>",a.querySelectorAll("[msallowcapture^='']").length&&q.push("[*^$]="+L+"*(?:''|\"\")"),a.querySelectorAll("[selected]").length||q.push("\\["+L+"*(?:value|"+K+")"),a.querySelectorAll("[id~="+u+"-]").length||q.push("~="),a.querySelectorAll(":checked").length||q.push(":checked"),a.querySelectorAll("a#"+u+"+*").length||q.push(".#.+[+~]")}),ja(function(a){var b=g.createElement("input");b.setAttribute("type","hidden"),a.appendChild(b).setAttribute("name","D"),a.querySelectorAll("[name=d]").length&&q.push("name"+L+"*[*^$|!~]?="),a.querySelectorAll(":enabled").length||q.push(":enabled",":disabled"),a.querySelectorAll("*,:x"),q.push(",.*:")})),(c.matchesSelector=$.test(s=o.matches||o.webkitMatchesSelector||o.mozMatchesSelector||o.oMatchesSelector||o.msMatchesSelector))&&ja(function(a){c.disconnectedMatch=s.call(a,"div"),s.call(a,"[s!='']:x"),r.push("!=",P)}),q=q.length&&new RegExp(q.join("|")),r=r.length&&new RegExp(r.join("|")),b=$.test(o.compareDocumentPosition),t=b||$.test(o.contains)?function(a,b){var c=9===a.nodeType?a.documentElement:a,d=b&&b.parentNode;return a===d||!(!d||1!==d.nodeType||!(c.contains?c.contains(d):a.compareDocumentPosition&&16&a.compareDocumentPosition(d)))}:function(a,b){if(b)while(b=b.parentNode)if(b===a)return!0;return!1},B=b?function(a,b){if(a===b)return l=!0,0;var d=!a.compareDocumentPosition-!b.compareDocumentPosition;return d?d:(d=(a.ownerDocument||a)===(b.ownerDocument||b)?a.compareDocumentPosition(b):1,1&d||!c.sortDetached&&b.compareDocumentPosition(a)===d?a===g||a.ownerDocument===v&&t(v,a)?-1:b===g||b.ownerDocument===v&&t(v,b)?1:k?J(k,a)-J(k,b):0:4&d?-1:1)}:function(a,b){if(a===b)return l=!0,0;var c,d=0,e=a.parentNode,f=b.parentNode,h=[a],i=[b];if(!e||!f)return a===g?-1:b===g?1:e?-1:f?1:k?J(k,a)-J(k,b):0;if(e===f)return la(a,b);c=a;while(c=c.parentNode)h.unshift(c);c=b;while(c=c.parentNode)i.unshift(c);while(h[d]===i[d])d++;return d?la(h[d],i[d]):h[d]===v?-1:i[d]===v?1:0},g):n},ga.matches=function(a,b){return ga(a,null,null,b)},ga.matchesSelector=function(a,b){if((a.ownerDocument||a)!==n&&m(a),b=b.replace(U,"='$1']"),!(!c.matchesSelector||!p||r&&r.test(b)||q&&q.test(b)))try{var d=s.call(a,b);if(d||c.disconnectedMatch||a.document&&11!==a.document.nodeType)return d}catch(e){}return ga(b,n,null,[a]).length>0},ga.contains=function(a,b){return(a.ownerDocument||a)!==n&&m(a),t(a,b)},ga.attr=function(a,b){(a.ownerDocument||a)!==n&&m(a);var e=d.attrHandle[b.toLowerCase()],f=e&&D.call(d.attrHandle,b.toLowerCase())?e(a,b,!p):void 0;return void 0!==f?f:c.attributes||!p?a.getAttribute(b):(f=a.getAttributeNode(b))&&f.specified?f.value:null},ga.error=function(a){throw new Error("Syntax error, unrecognized expression: "+a)},ga.uniqueSort=function(a){var b,d=[],e=0,f=0;if(l=!c.detectDuplicates,k=!c.sortStable&&a.slice(0),a.sort(B),l){while(b=a[f++])b===a[f]&&(e=d.push(f));while(e--)a.splice(d[e],1)}return k=null,a},e=ga.getText=function(a){var b,c="",d=0,f=a.nodeType;if(f){if(1===f||9===f||11===f){if("string"==typeof a.textContent)return a.textContent;for(a=a.firstChild;a;a=a.nextSibling)c+=e(a)}else if(3===f||4===f)return a.nodeValue}else while(b=a[d++])c+=e(b);return c},d=ga.selectors={cacheLength:50,createPseudo:ia,match:X,attrHandle:{},find:{},relative:{">":{dir:"parentNode",first:!0}," ":{dir:"parentNode"},"+":{dir:"previousSibling",first:!0},"~":{dir:"previousSibling"}},preFilter:{ATTR:function(a){return a[1]=a[1].replace(ca,da),a[3]=(a[3]||a[4]||a[5]||"").replace(ca,da),"~="===a[2]&&(a[3]=" "+a[3]+" "),a.slice(0,4)},CHILD:function(a){return a[1]=a[1].toLowerCase(),"nth"===a[1].slice(0,3)?(a[3]||ga.error(a[0]),a[4]=+(a[4]?a[5]+(a[6]||1):2*("even"===a[3]||"odd"===a[3])),a[5]=+(a[7]+a[8]||"odd"===a[3])):a[3]&&ga.error(a[0]),a},PSEUDO:function(a){var b,c=!a[6]&&a[2];return X.CHILD.test(a[0])?null:(a[3]?a[2]=a[4]||a[5]||"":c&&V.test(c)&&(b=g(c,!0))&&(b=c.indexOf(")",c.length-b)-c.length)&&(a[0]=a[0].slice(0,b),a[2]=c.slice(0,b)),a.slice(0,3))}},filter:{TAG:function(a){var b=a.replace(ca,da).toLowerCase();return"*"===a?function(){return!0}:function(a){return a.nodeName&&a.nodeName.toLowerCase()===b}},CLASS:function(a){var b=y[a+" "];return b||(b=new RegExp("(^|"+L+")"+a+"("+L+"|$)"))&&y(a,function(a){return b.test("string"==typeof a.className&&a.className||"undefined"!=typeof a.getAttribute&&a.getAttribute("class")||"")})},ATTR:function(a,b,c){return function(d){var e=ga.attr(d,a);return null==e?"!="===b:b?(e+="","="===b?e===c:"!="===b?e!==c:"^="===b?c&&0===e.indexOf(c):"*="===b?c&&e.indexOf(c)>-1:"$="===b?c&&e.slice(-c.length)===c:"~="===b?(" "+e.replace(Q," ")+" ").indexOf(c)>-1:"|="===b?e===c||e.slice(0,c.length+1)===c+"-":!1):!0}},CHILD:function(a,b,c,d,e){var f="nth"!==a.slice(0,3),g="last"!==a.slice(-4),h="of-type"===b;return 1===d&&0===e?function(a){return!!a.parentNode}:function(b,c,i){var j,k,l,m,n,o,p=f!==g?"nextSibling":"previousSibling",q=b.parentNode,r=h&&b.nodeName.toLowerCase(),s=!i&&!h;if(q){if(f){while(p){l=b;while(l=l[p])if(h?l.nodeName.toLowerCase()===r:1===l.nodeType)return!1;o=p="only"===a&&!o&&"nextSibling"}return!0}if(o=[g?q.firstChild:q.lastChild],g&&s){k=q[u]||(q[u]={}),j=k[a]||[],n=j[0]===w&&j[1],m=j[0]===w&&j[2],l=n&&q.childNodes[n];while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if(1===l.nodeType&&++m&&l===b){k[a]=[w,n,m];break}}else if(s&&(j=(b[u]||(b[u]={}))[a])&&j[0]===w)m=j[1];else while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if((h?l.nodeName.toLowerCase()===r:1===l.nodeType)&&++m&&(s&&((l[u]||(l[u]={}))[a]=[w,m]),l===b))break;return m-=e,m===d||m%d===0&&m/d>=0}}},PSEUDO:function(a,b){var c,e=d.pseudos[a]||d.setFilters[a.toLowerCase()]||ga.error("unsupported pseudo: "+a);return e[u]?e(b):e.length>1?(c=[a,a,"",b],d.setFilters.hasOwnProperty(a.toLowerCase())?ia(function(a,c){var d,f=e(a,b),g=f.length;while(g--)d=J(a,f[g]),a[d]=!(c[d]=f[g])}):function(a){return e(a,0,c)}):e}},pseudos:{not:ia(function(a){var b=[],c=[],d=h(a.replace(R,"$1"));return d[u]?ia(function(a,b,c,e){var f,g=d(a,null,e,[]),h=a.length;while(h--)(f=g[h])&&(a[h]=!(b[h]=f))}):function(a,e,f){return b[0]=a,d(b,null,f,c),b[0]=null,!c.pop()}}),has:ia(function(a){return function(b){return ga(a,b).length>0}}),contains:ia(function(a){return a=a.replace(ca,da),function(b){return(b.textContent||b.innerText||e(b)).indexOf(a)>-1}}),lang:ia(function(a){return W.test(a||"")||ga.error("unsupported lang: "+a),a=a.replace(ca,da).toLowerCase(),function(b){var c;do if(c=p?b.lang:b.getAttribute("xml:lang")||b.getAttribute("lang"))return c=c.toLowerCase(),c===a||0===c.indexOf(a+"-");while((b=b.parentNode)&&1===b.nodeType);return!1}}),target:function(b){var c=a.location&&a.location.hash;return c&&c.slice(1)===b.id},root:function(a){return a===o},focus:function(a){return a===n.activeElement&&(!n.hasFocus||n.hasFocus())&&!!(a.type||a.href||~a.tabIndex)},enabled:function(a){return a.disabled===!1},disabled:function(a){return a.disabled===!0},checked:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&!!a.checked||"option"===b&&!!a.selected},selected:function(a){return a.parentNode&&a.parentNode.selectedIndex,a.selected===!0},empty:function(a){for(a=a.firstChild;a;a=a.nextSibling)if(a.nodeType<6)return!1;return!0},parent:function(a){return!d.pseudos.empty(a)},header:function(a){return Z.test(a.nodeName)},input:function(a){return Y.test(a.nodeName)},button:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&"button"===a.type||"button"===b},text:function(a){var b;return"input"===a.nodeName.toLowerCase()&&"text"===a.type&&(null==(b=a.getAttribute("type"))||"text"===b.toLowerCase())},first:oa(function(){return[0]}),last:oa(function(a,b){return[b-1]}),eq:oa(function(a,b,c){return[0>c?c+b:c]}),even:oa(function(a,b){for(var c=0;b>c;c+=2)a.push(c);return a}),odd:oa(function(a,b){for(var c=1;b>c;c+=2)a.push(c);return a}),lt:oa(function(a,b,c){for(var d=0>c?c+b:c;--d>=0;)a.push(d);return a}),gt:oa(function(a,b,c){for(var d=0>c?c+b:c;++d<b;)a.push(d);return a})}},d.pseudos.nth=d.pseudos.eq;for(b in{radio:!0,checkbox:!0,file:!0,password:!0,image:!0})d.pseudos[b]=ma(b);for(b in{submit:!0,reset:!0})d.pseudos[b]=na(b);function qa(){}qa.prototype=d.filters=d.pseudos,d.setFilters=new qa,g=ga.tokenize=function(a,b){var c,e,f,g,h,i,j,k=z[a+" "];if(k)return b?0:k.slice(0);h=a,i=[],j=d.preFilter;while(h){(!c||(e=S.exec(h)))&&(e&&(h=h.slice(e[0].length)||h),i.push(f=[])),c=!1,(e=T.exec(h))&&(c=e.shift(),f.push({value:c,type:e[0].replace(R," ")}),h=h.slice(c.length));for(g in d.filter)!(e=X[g].exec(h))||j[g]&&!(e=j[g](e))||(c=e.shift(),f.push({value:c,type:g,matches:e}),h=h.slice(c.length));if(!c)break}return b?h.length:h?ga.error(a):z(a,i).slice(0)};function ra(a){for(var b=0,c=a.length,d="";c>b;b++)d+=a[b].value;return d}function sa(a,b,c){var d=b.dir,e=c&&"parentNode"===d,f=x++;return b.first?function(b,c,f){while(b=b[d])if(1===b.nodeType||e)return a(b,c,f)}:function(b,c,g){var h,i,j=[w,f];if(g){while(b=b[d])if((1===b.nodeType||e)&&a(b,c,g))return!0}else while(b=b[d])if(1===b.nodeType||e){if(i=b[u]||(b[u]={}),(h=i[d])&&h[0]===w&&h[1]===f)return j[2]=h[2];if(i[d]=j,j[2]=a(b,c,g))return!0}}}function ta(a){return a.length>1?function(b,c,d){var e=a.length;while(e--)if(!a[e](b,c,d))return!1;return!0}:a[0]}function ua(a,b,c){for(var d=0,e=b.length;e>d;d++)ga(a,b[d],c);return c}function va(a,b,c,d,e){for(var f,g=[],h=0,i=a.length,j=null!=b;i>h;h++)(f=a[h])&&(!c||c(f,d,e))&&(g.push(f),j&&b.push(h));return g}function wa(a,b,c,d,e,f){return d&&!d[u]&&(d=wa(d)),e&&!e[u]&&(e=wa(e,f)),ia(function(f,g,h,i){var j,k,l,m=[],n=[],o=g.length,p=f||ua(b||"*",h.nodeType?[h]:h,[]),q=!a||!f&&b?p:va(p,m,a,h,i),r=c?e||(f?a:o||d)?[]:g:q;if(c&&c(q,r,h,i),d){j=va(r,n),d(j,[],h,i),k=j.length;while(k--)(l=j[k])&&(r[n[k]]=!(q[n[k]]=l))}if(f){if(e||a){if(e){j=[],k=r.length;while(k--)(l=r[k])&&j.push(q[k]=l);e(null,r=[],j,i)}k=r.length;while(k--)(l=r[k])&&(j=e?J(f,l):m[k])>-1&&(f[j]=!(g[j]=l))}}else r=va(r===g?r.splice(o,r.length):r),e?e(null,g,r,i):H.apply(g,r)})}function xa(a){for(var b,c,e,f=a.length,g=d.relative[a[0].type],h=g||d.relative[" "],i=g?1:0,k=sa(function(a){return a===b},h,!0),l=sa(function(a){return J(b,a)>-1},h,!0),m=[function(a,c,d){var e=!g&&(d||c!==j)||((b=c).nodeType?k(a,c,d):l(a,c,d));return b=null,e}];f>i;i++)if(c=d.relative[a[i].type])m=[sa(ta(m),c)];else{if(c=d.filter[a[i].type].apply(null,a[i].matches),c[u]){for(e=++i;f>e;e++)if(d.relative[a[e].type])break;return wa(i>1&&ta(m),i>1&&ra(a.slice(0,i-1).concat({value:" "===a[i-2].type?"*":""})).replace(R,"$1"),c,e>i&&xa(a.slice(i,e)),f>e&&xa(a=a.slice(e)),f>e&&ra(a))}m.push(c)}return ta(m)}function ya(a,b){var c=b.length>0,e=a.length>0,f=function(f,g,h,i,k){var l,m,o,p=0,q="0",r=f&&[],s=[],t=j,u=f||e&&d.find.TAG("*",k),v=w+=null==t?1:Math.random()||.1,x=u.length;for(k&&(j=g!==n&&g);q!==x&&null!=(l=u[q]);q++){if(e&&l){m=0;while(o=a[m++])if(o(l,g,h)){i.push(l);break}k&&(w=v)}c&&((l=!o&&l)&&p--,f&&r.push(l))}if(p+=q,c&&q!==p){m=0;while(o=b[m++])o(r,s,g,h);if(f){if(p>0)while(q--)r[q]||s[q]||(s[q]=F.call(i));s=va(s)}H.apply(i,s),k&&!f&&s.length>0&&p+b.length>1&&ga.uniqueSort(i)}return k&&(w=v,j=t),r};return c?ia(f):f}return h=ga.compile=function(a,b){var c,d=[],e=[],f=A[a+" "];if(!f){b||(b=g(a)),c=b.length;while(c--)f=xa(b[c]),f[u]?d.push(f):e.push(f);f=A(a,ya(e,d)),f.selector=a}return f},i=ga.select=function(a,b,e,f){var i,j,k,l,m,n="function"==typeof a&&a,o=!f&&g(a=n.selector||a);if(e=e||[],1===o.length){if(j=o[0]=o[0].slice(0),j.length>2&&"ID"===(k=j[0]).type&&c.getById&&9===b.nodeType&&p&&d.relative[j[1].type]){if(b=(d.find.ID(k.matches[0].replace(ca,da),b)||[])[0],!b)return e;n&&(b=b.parentNode),a=a.slice(j.shift().value.length)}i=X.needsContext.test(a)?0:j.length;while(i--){if(k=j[i],d.relative[l=k.type])break;if((m=d.find[l])&&(f=m(k.matches[0].replace(ca,da),aa.test(j[0].type)&&pa(b.parentNode)||b))){if(j.splice(i,1),a=f.length&&ra(j),!a)return H.apply(e,f),e;break}}}return(n||h(a,o))(f,b,!p,e,aa.test(a)&&pa(b.parentNode)||b),e},c.sortStable=u.split("").sort(B).join("")===u,c.detectDuplicates=!!l,m(),c.sortDetached=ja(function(a){return 1&a.compareDocumentPosition(n.createElement("div"))}),ja(function(a){return a.innerHTML="<a href='#'></a>","#"===a.firstChild.getAttribute("href")})||ka("type|href|height|width",function(a,b,c){return c?void 0:a.getAttribute(b,"type"===b.toLowerCase()?1:2)}),c.attributes&&ja(function(a){return a.innerHTML="<input/>",a.firstChild.setAttribute("value",""),""===a.firstChild.getAttribute("value")})||ka("value",function(a,b,c){return c||"input"!==a.nodeName.toLowerCase()?void 0:a.defaultValue}),ja(function(a){return null==a.getAttribute("disabled")})||ka(K,function(a,b,c){var d;return c?void 0:a[b]===!0?b.toLowerCase():(d=a.getAttributeNode(b))&&d.specified?d.value:null}),ga}(a);m.find=s,m.expr=s.selectors,m.expr[":"]=m.expr.pseudos,m.unique=s.uniqueSort,m.text=s.getText,m.isXMLDoc=s.isXML,m.contains=s.contains;var t=m.expr.match.needsContext,u=/^<(\w+)\s*\/?>(?:<\/\1>|)$/,v=/^.[^:#\[\.,]*$/;function w(a,b,c){if(m.isFunction(b))return m.grep(a,function(a,d){return!!b.call(a,d,a)!==c});if(b.nodeType)return m.grep(a,function(a){return a===b!==c});if("string"==typeof b){if(v.test(b))return m.filter(b,a,c);b=m.filter(b,a)}return m.grep(a,function(a){return m.inArray(a,b)>=0!==c})}m.filter=function(a,b,c){var d=b[0];return c&&(a=":not("+a+")"),1===b.length&&1===d.nodeType?m.find.matchesSelector(d,a)?[d]:[]:m.find.matches(a,m.grep(b,function(a){return 1===a.nodeType}))},m.fn.extend({find:function(a){var b,c=[],d=this,e=d.length;if("string"!=typeof a)return this.pushStack(m(a).filter(function(){for(b=0;e>b;b++)if(m.contains(d[b],this))return!0}));for(b=0;e>b;b++)m.find(a,d[b],c);return c=this.pushStack(e>1?m.unique(c):c),c.selector=this.selector?this.selector+" "+a:a,c},filter:function(a){return this.pushStack(w(this,a||[],!1))},not:function(a){return this.pushStack(w(this,a||[],!0))},is:function(a){return!!w(this,"string"==typeof a&&t.test(a)?m(a):a||[],!1).length}});var x,y=a.document,z=/^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]*))$/,A=m.fn.init=function(a,b){var c,d;if(!a)return this;if("string"==typeof a){if(c="<"===a.charAt(0)&&">"===a.charAt(a.length-1)&&a.length>=3?[null,a,null]:z.exec(a),!c||!c[1]&&b)return!b||b.jquery?(b||x).find(a):this.constructor(b).find(a);if(c[1]){if(b=b instanceof m?b[0]:b,m.merge(this,m.parseHTML(c[1],b&&b.nodeType?b.ownerDocument||b:y,!0)),u.test(c[1])&&m.isPlainObject(b))for(c in b)m.isFunction(this[c])?this[c](b[c]):this.attr(c,b[c]);return this}if(d=y.getElementById(c[2]),d&&d.parentNode){if(d.id!==c[2])return x.find(a);this.length=1,this[0]=d}return this.context=y,this.selector=a,this}return a.nodeType?(this.context=this[0]=a,this.length=1,this):m.isFunction(a)?"undefined"!=typeof x.ready?x.ready(a):a(m):(void 0!==a.selector&&(this.selector=a.selector,this.context=a.context),m.makeArray(a,this))};A.prototype=m.fn,x=m(y);var B=/^(?:parents|prev(?:Until|All))/,C={children:!0,contents:!0,next:!0,prev:!0};m.extend({dir:function(a,b,c){var d=[],e=a[b];while(e&&9!==e.nodeType&&(void 0===c||1!==e.nodeType||!m(e).is(c)))1===e.nodeType&&d.push(e),e=e[b];return d},sibling:function(a,b){for(var c=[];a;a=a.nextSibling)1===a.nodeType&&a!==b&&c.push(a);return c}}),m.fn.extend({has:function(a){var b,c=m(a,this),d=c.length;return this.filter(function(){for(b=0;d>b;b++)if(m.contains(this,c[b]))return!0})},closest:function(a,b){for(var c,d=0,e=this.length,f=[],g=t.test(a)||"string"!=typeof a?m(a,b||this.context):0;e>d;d++)for(c=this[d];c&&c!==b;c=c.parentNode)if(c.nodeType<11&&(g?g.index(c)>-1:1===c.nodeType&&m.find.matchesSelector(c,a))){f.push(c);break}return this.pushStack(f.length>1?m.unique(f):f)},index:function(a){return a?"string"==typeof a?m.inArray(this[0],m(a)):m.inArray(a.jquery?a[0]:a,this):this[0]&&this[0].parentNode?this.first().prevAll().length:-1},add:function(a,b){return this.pushStack(m.unique(m.merge(this.get(),m(a,b))))},addBack:function(a){return this.add(null==a?this.prevObject:this.prevObject.filter(a))}});function D(a,b){do a=a[b];while(a&&1!==a.nodeType);return a}m.each({parent:function(a){var b=a.parentNode;return b&&11!==b.nodeType?b:null},parents:function(a){return m.dir(a,"parentNode")},parentsUntil:function(a,b,c){return m.dir(a,"parentNode",c)},next:function(a){return D(a,"nextSibling")},prev:function(a){return D(a,"previousSibling")},nextAll:function(a){return m.dir(a,"nextSibling")},prevAll:function(a){return m.dir(a,"previousSibling")},nextUntil:function(a,b,c){return m.dir(a,"nextSibling",c)},prevUntil:function(a,b,c){return m.dir(a,"previousSibling",c)},siblings:function(a){return m.sibling((a.parentNode||{}).firstChild,a)},children:function(a){return m.sibling(a.firstChild)},contents:function(a){return m.nodeName(a,"iframe")?a.contentDocument||a.contentWindow.document:m.merge([],a.childNodes)}},function(a,b){m.fn[a]=function(c,d){var e=m.map(this,b,c);return"Until"!==a.slice(-5)&&(d=c),d&&"string"==typeof d&&(e=m.filter(d,e)),this.length>1&&(C[a]||(e=m.unique(e)),B.test(a)&&(e=e.reverse())),this.pushStack(e)}});var E=/\S+/g,F={};function G(a){var b=F[a]={};return m.each(a.match(E)||[],function(a,c){b[c]=!0}),b}m.Callbacks=function(a){a="string"==typeof a?F[a]||G(a):m.extend({},a);var b,c,d,e,f,g,h=[],i=!a.once&&[],j=function(l){for(c=a.memory&&l,d=!0,f=g||0,g=0,e=h.length,b=!0;h&&e>f;f++)if(h[f].apply(l[0],l[1])===!1&&a.stopOnFalse){c=!1;break}b=!1,h&&(i?i.length&&j(i.shift()):c?h=[]:k.disable())},k={add:function(){if(h){var d=h.length;!function f(b){m.each(b,function(b,c){var d=m.type(c);"function"===d?a.unique&&k.has(c)||h.push(c):c&&c.length&&"string"!==d&&f(c)})}(arguments),b?e=h.length:c&&(g=d,j(c))}return this},remove:function(){return h&&m.each(arguments,function(a,c){var d;while((d=m.inArray(c,h,d))>-1)h.splice(d,1),b&&(e>=d&&e--,f>=d&&f--)}),this},has:function(a){return a?m.inArray(a,h)>-1:!(!h||!h.length)},empty:function(){return h=[],e=0,this},disable:function(){return h=i=c=void 0,this},disabled:function(){return!h},lock:function(){return i=void 0,c||k.disable(),this},locked:function(){return!i},fireWith:function(a,c){return!h||d&&!i||(c=c||[],c=[a,c.slice?c.slice():c],b?i.push(c):j(c)),this},fire:function(){return k.fireWith(this,arguments),this},fired:function(){return!!d}};return k},m.extend({Deferred:function(a){var b=[["resolve","done",m.Callbacks("once memory"),"resolved"],["reject","fail",m.Callbacks("once memory"),"rejected"],["notify","progress",m.Callbacks("memory")]],c="pending",d={state:function(){return c},always:function(){return e.done(arguments).fail(arguments),this},then:function(){var a=arguments;return m.Deferred(function(c){m.each(b,function(b,f){var g=m.isFunction(a[b])&&a[b];e[f[1]](function(){var a=g&&g.apply(this,arguments);a&&m.isFunction(a.promise)?a.promise().done(c.resolve).fail(c.reject).progress(c.notify):c[f[0]+"With"](this===d?c.promise():this,g?[a]:arguments)})}),a=null}).promise()},promise:function(a){return null!=a?m.extend(a,d):d}},e={};return d.pipe=d.then,m.each(b,function(a,f){var g=f[2],h=f[3];d[f[1]]=g.add,h&&g.add(function(){c=h},b[1^a][2].disable,b[2][2].lock),e[f[0]]=function(){return e[f[0]+"With"](this===e?d:this,arguments),this},e[f[0]+"With"]=g.fireWith}),d.promise(e),a&&a.call(e,e),e},when:function(a){var b=0,c=d.call(arguments),e=c.length,f=1!==e||a&&m.isFunction(a.promise)?e:0,g=1===f?a:m.Deferred(),h=function(a,b,c){return function(e){b[a]=this,c[a]=arguments.length>1?d.call(arguments):e,c===i?g.notifyWith(b,c):--f||g.resolveWith(b,c)}},i,j,k;if(e>1)for(i=new Array(e),j=new Array(e),k=new Array(e);e>b;b++)c[b]&&m.isFunction(c[b].promise)?c[b].promise().done(h(b,k,c)).fail(g.reject).progress(h(b,j,i)):--f;return f||g.resolveWith(k,c),g.promise()}});var H;m.fn.ready=function(a){return m.ready.promise().done(a),this},m.extend({isReady:!1,readyWait:1,holdReady:function(a){a?m.readyWait++:m.ready(!0)},ready:function(a){if(a===!0?!--m.readyWait:!m.isReady){if(!y.body)return setTimeout(m.ready);m.isReady=!0,a!==!0&&--m.readyWait>0||(H.resolveWith(y,[m]),m.fn.triggerHandler&&(m(y).triggerHandler("ready"),m(y).off("ready")))}}});function I(){y.addEventListener?(y.removeEventListener("DOMContentLoaded",J,!1),a.removeEventListener("load",J,!1)):(y.detachEvent("onreadystatechange",J),a.detachEvent("onload",J))}function J(){(y.addEventListener||"load"===event.type||"complete"===y.readyState)&&(I(),m.ready())}m.ready.promise=function(b){if(!H)if(H=m.Deferred(),"complete"===y.readyState)setTimeout(m.ready);else if(y.addEventListener)y.addEventListener("DOMContentLoaded",J,!1),a.addEventListener("load",J,!1);else{y.attachEvent("onreadystatechange",J),a.attachEvent("onload",J);var c=!1;try{c=null==a.frameElement&&y.documentElement}catch(d){}c&&c.doScroll&&!function e(){if(!m.isReady){try{c.doScroll("left")}catch(a){return setTimeout(e,50)}I(),m.ready()}}()}return H.promise(b)};var K="undefined",L;for(L in m(k))break;k.ownLast="0"!==L,k.inlineBlockNeedsLayout=!1,m(function(){var a,b,c,d;c=y.getElementsByTagName("body")[0],c&&c.style&&(b=y.createElement("div"),d=y.createElement("div"),d.style.cssText="position:absolute;border:0;width:0;height:0;top:0;left:-9999px",c.appendChild(d).appendChild(b),typeof b.style.zoom!==K&&(b.style.cssText="display:inline;margin:0;border:0;padding:1px;width:1px;zoom:1",k.inlineBlockNeedsLayout=a=3===b.offsetWidth,a&&(c.style.zoom=1)),c.removeChild(d))}),function(){var a=y.createElement("div");if(null==k.deleteExpando){k.deleteExpando=!0;try{delete a.test}catch(b){k.deleteExpando=!1}}a=null}(),m.acceptData=function(a){var b=m.noData[(a.nodeName+" ").toLowerCase()],c=+a.nodeType||1;return 1!==c&&9!==c?!1:!b||b!==!0&&a.getAttribute("classid")===b};var M=/^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,N=/([A-Z])/g;function O(a,b,c){if(void 0===c&&1===a.nodeType){var d="data-"+b.replace(N,"-$1").toLowerCase();if(c=a.getAttribute(d),"string"==typeof c){try{c="true"===c?!0:"false"===c?!1:"null"===c?null:+c+""===c?+c:M.test(c)?m.parseJSON(c):c}catch(e){}m.data(a,b,c)}else c=void 0}return c}function P(a){var b;for(b in a)if(("data"!==b||!m.isEmptyObject(a[b]))&&"toJSON"!==b)return!1;
@@ -1753,681 +1753,471 @@ summary {
 
 
 
-<h1 class="title toc-ignore">Matris</h1>
+<h1 class="title toc-ignore">R’da Karakter ile Calismak</h1>
 
 </div>
 
 
 <!-- rnb-text-begin -->
-<div id="matris-nedir" class="section level1">
-<h1>1. Matris nedir?</h1>
-<p>Matrisler, bir veya birden fazla satir ve sutundan olusan dizilerdir.</p>
-</div>
-<div id="matris-bicimlendirme" class="section level1">
-<h1>2. Matris Bicimlendirme</h1>
-<div id="matris-olusturma" class="section level2">
-<h2>Matris Olusturma</h2>
+<div id="karakter-olusturmak" class="section level1">
+<h1>1. Karakter Olusturmak</h1>
+<div id="bos-karakter" class="section level2">
+<h2>Bos Karakter</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudjE8LSBjKDEsMiwzLDQsNSlcbnYyPC0gYygyLDMsNCw1LDYpXG52MzwtIGMoMyw0LDUsNiw3KVxudjQ8LSBjKDQsNSw2LDcsOClcbnY8LWNiaW5kKHYxLHYyLHYzLHY0KVxubWF0cml4KDE6OSxucm93ID0gMyxuY29sID0gMyxieXJvdyA9IFRSVUUpXG5gYGAifQ== -->
-<pre class="r"><code>v1&lt;- c(1,2,3,4,5)
-v2&lt;- c(2,3,4,5,6)
-v3&lt;- c(3,4,5,6,7)
-v4&lt;- c(4,5,6,7,8)
-v&lt;-cbind(v1,v2,v3,v4)
-matrix(1:9,nrow = 3,ncol = 3,byrow = TRUE)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYm9zX3N0cmluZyA8LSBcIlwiXG5jbGFzcyhib3Nfc3RyaW5nKVxuYGBgIn0= -->
+<pre class="r"><code>bos_string &lt;- &quot;&quot;
+class(bos_string)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXVxuWzEsXSAgICAxICAgIDIgICAgM1xuWzIsXSAgICA0ICAgIDUgICAgNlxuWzMsXSAgICA3ICAgIDggICAgOVxuIn0= -->
-<pre><code>     [,1] [,2] [,3]
-[1,]    1    2    3
-[2,]    4    5    6
-[3,]    7    8    9</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiY2hhcmFjdGVyXCJcbiJ9 -->
+<pre><code>[1] &quot;character&quot;</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWF0cml4KGMoMSwyLDMsMTEsMjIsMzMpLDIsMylcbmBgYCJ9 -->
-<pre class="r"><code>matrix(c(1,2,3,11,22,33),2,3)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxub3JuZWsgPC0gY2hhcmFjdGVyKDApXG5zdHIob3JuZWspXG5gYGAifQ== -->
+<pre class="r"><code>ornek &lt;- character(0)
+str(ornek)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXVxuWzEsXSAgICAxICAgIDMgICAyMlxuWzIsXSAgICAyICAgMTEgICAzM1xuIn0= -->
-<pre><code>     [,1] [,2] [,3]
-[1,]    1    3   22
-[2,]    2   11   33</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiIGNocigwKSBcbiJ9 -->
+<pre><code> chr(0) </code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWF0cml4KGMoMSwyLDMsMTEsMjIsMzMpLDIpXG5gYGAifQ== -->
-<pre class="r"><code>matrix(c(1,2,3,11,22,33),2)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxub3JuZWtbMV1cbmBgYCJ9 -->
+<pre class="r"><code>ornek[1]</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXVxuWzEsXSAgICAxICAgIDMgICAyMlxuWzIsXSAgICAyICAgMTEgICAzM1xuIn0= -->
-<pre><code>     [,1] [,2] [,3]
-[1,]    1    3   22
-[2,]    2   11   33</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIE5BXG4ifQ== -->
+<pre><code>[1] NA</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxub3JuZWtbMV0gPC0gXCJCdSBCaXJpbmNpIERlZ2VyZGlyXCJcbm9ybmVrXG5gYGAifQ== -->
+<pre class="r"><code>ornek[1] &lt;- &quot;Bu Birinci Degerdir&quot;
+ornek</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiQnUgQmlyaW5jaSBEZWdlcmRpclwiXG4ifQ== -->
+<pre><code>[1] &quot;Bu Birinci Degerdir&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxub3JuZWtbMl0gPC0gXCJJa2luY2kgRGVnZXJcIlxub3JuZWtcbmBgYCJ9 -->
+<pre class="r"><code>ornek[2] &lt;- &quot;Ikinci Deger&quot;
+ornek</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiQnUgQmlyaW5jaSBEZWdlcmRpclwiIFwiSWtpbmNpIERlZ2VyXCIgICAgICAgXG4ifQ== -->
+<pre><code>[1] &quot;Bu Birinci Degerdir&quot; &quot;Ikinci Deger&quot;       </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaXMuY2hhcmFjdGVyKG9ybmVrKVxuYGBgIn0= -->
+<pre class="r"><code>is.character(ornek)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
+<pre><code>[1] TRUE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuY2hhcmFjdGVyKDkpXG5gYGAifQ== -->
+<pre class="r"><code>as.character(9)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiOVwiXG4ifQ== -->
+<pre><code>[1] &quot;9&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
-<div id="matris-boyutlari-ve-frekans-tablosu" class="section level2">
-<h2>Matris Boyutlari ve Frekans Tablosu</h2>
+<div id="paste-ve-digerleri" class="section level2">
+<h2>paste() ve digerleri</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubTwtbWF0cml4KGMoMSwyLDMsMTEsMjIsMzMsMTExLDIyMiwzMzMpLDMsMylcbmRpbShtKVxuYGBgIn0= -->
-<pre class="r"><code>m&lt;-matrix(c(1,2,3,11,22,33,111,222,333),3,3)
-dim(m)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWV0aW4gPC0gXCJCdSBiaXIgS2FyYWt0ZXJkaXJcIlxua2FyYWt0ZXIgPC0gXCJCdSBkYSBLYXJha3RlcmRpclwiXG5jKFwiS2FyYWt0ZXJcIilcbmBgYCJ9 -->
+<pre class="r"><code>metin &lt;- &quot;Bu bir Karakterdir&quot;
+karakter &lt;- &quot;Bu da Karakterdir&quot;
+c(&quot;Karakter&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDMgM1xuIn0= -->
-<pre><code>[1] 3 3</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiS2FyYWt0ZXJcIlxuIn0= -->
+<pre><code>[1] &quot;Karakter&quot;</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDwtbWF0cml4KHJlcCgxOjMsMyksMywzKVxudGFibGUobSlcbmBgYCJ9 -->
-<pre class="r"><code>x&lt;-matrix(rep(1:3,3),3,3)
-table(m)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGFzdGUobWV0aW4pXG5gYGAifQ== -->
+<pre class="r"><code>paste(metin)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoibVxuICAxICAgMiAgIDMgIDExICAyMiAgMzMgMTExIDIyMiAzMzMgXG4gIDEgICAxICAgMSAgIDEgICAxICAgMSAgIDEgICAxICAgMSBcbiJ9 -->
-<pre><code>m
-  1   2   3  11  22  33 111 222 333 
-  1   1   1   1   1   1   1   1   1 </code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiQnUgYmlyIEthcmFrdGVyZGlyXCJcbiJ9 -->
+<pre><code>[1] &quot;Bu bir Karakterdir&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGFzdGUoXCJCdSBiaXIgS2FyYWt0ZXJkaXJcIilcbmBgYCJ9 -->
+<pre class="r"><code>paste(&quot;Bu bir Karakterdir&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiQnUgYmlyIEthcmFrdGVyZGlyXCJcbiJ9 -->
+<pre><code>[1] &quot;Bu bir Karakterdir&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGFzdGUoXCI5OTk5XCIpXG5gYGAifQ== -->
+<pre class="r"><code>paste(&quot;9999&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiOTk5OVwiXG4ifQ== -->
+<pre><code>[1] &quot;9999&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGFzdGUobWV0aW4sa2FyYWt0ZXIpXG5gYGAifQ== -->
+<pre class="r"><code>paste(metin,karakter)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiQnUgYmlyIEthcmFrdGVyZGlyIEJ1IGRhIEthcmFrdGVyZGlyXCJcbiJ9 -->
+<pre><code>[1] &quot;Bu bir Karakterdir Bu da Karakterdir&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGFzdGUoMSlcbmBgYCJ9 -->
+<pre class="r"><code>paste(1)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMVwiXG4ifQ== -->
+<pre><code>[1] &quot;1&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGFzdGUobWV0aW4sa2FyYWt0ZXIsc2VwPVwiLS0tLS0tLVwiKVxuYGBgIn0= -->
+<pre class="r"><code>paste(metin,karakter,sep=&quot;-------&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiQnUgYmlyIEthcmFrdGVyZGlyLS0tLS0tLUJ1IGRhIEthcmFrdGVyZGlyXCJcbiJ9 -->
+<pre><code>[1] &quot;Bu bir Karakterdir-------Bu da Karakterdir&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHJpbnQoXCJLYXJha3RlclwiLHF1b3RlID0gRkFMU0UpXG5gYGAifQ== -->
+<pre class="r"><code>print(&quot;Karakter&quot;,quote = FALSE)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIEthcmFrdGVyXG4ifQ== -->
+<pre><code>[1] Karakter</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubm9xdW90ZShcImthcmFrdGVyXCIpXG5gYGAifQ== -->
+<pre class="r"><code>noquote(&quot;karakter&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIGthcmFrdGVyXG4ifQ== -->
+<pre><code>[1] karakter</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2F0KFwiU2VsYW1cIilcbmBgYCJ9 -->
+<pre class="r"><code>cat(&quot;Selam&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiU2VsYW1cbiJ9 -->
+<pre><code>Selam</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudG9TdHJpbmcoOTkpXG5gYGAifQ== -->
+<pre class="r"><code>toString(99)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiOTlcIlxuIn0= -->
+<pre><code>[1] &quot;99&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYTwtdG9TdHJpbmcoYyhcImFiY1wiLDk5LFRSVUUsTkEsc3VtKDE6OTkpKSlcbmFcbmBgYCJ9 -->
+<pre class="r"><code>a&lt;-toString(c(&quot;abc&quot;,99,TRUE,NA,sum(1:99)))
+a</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiYWJjLCA5OSwgVFJVRSwgTkEsIDQ5NTBcIlxuIn0= -->
+<pre><code>[1] &quot;abc, 99, TRUE, NA, 4950&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
-<div id="matris-birlestirme" class="section level2">
-<h2>Matris Birlestirme</h2>
+</div>
+<div id="temel-karakter-islemleri" class="section level1">
+<h1>2. Temel Karakter Islemleri</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUE8LXJub3JtKDE2KVxuTUE8LW1hdHJpeChNQSw0LDQpXG5NQjwtcm5vcm0oMTYsOTAsMTApXG5NQjwtbWF0cml4KE1CLDQsNClcbnJiaW5kKE1BLE1CKVxuYGBgIn0= -->
-<pre class="r"><code>MA&lt;-rnorm(16)
-MA&lt;-matrix(MA,4,4)
-MB&lt;-rnorm(16,90,10)
-MB&lt;-matrix(MB,4,4)
-rbind(MA,MB)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmNoYXIoXCJUdXJoYW4gQ2FuIEthcmdpblwiKVxuYGBgIn0= -->
+<pre class="r"><code>nchar(&quot;Turhan Can Kargin&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgWywxXSAgICAgICAgWywyXSAgICAgICBbLDNdXG5bMSxdICAtMi42NzE4MjY3ICAgMC45Njc5MTg0IC0wLjgyNTQxNjJcblsyLF0gIC0xLjI1NTYwMzIgICAwLjg5MTQ1MjYgLTAuODQ2NDU5N1xuWzMsXSAgLTAuMTYwMzc4MCAgLTEuMjcxNjU2MyAtMC41MDM0OTIzXG5bNCxdICAgMC4zODc1MjM0ICAgMS4xNDcyMzk1ICAwLjYyNDYxMzBcbls1LF0gMTAwLjAwMzE0OTUgIDk2LjQ5NDcxNTggODIuMTAwMjA4N1xuWzYsXSAgOTEuMzgyNzQzMiAgOTAuMDI0ODQxNCA5MS45MzMzODY3XG5bNyxdICA4Ni4zMzQ2NzE1ICA5Mi45NTE5MDg2IDk3Ljk0NTEwMzVcbls4LF0gMTA3Ljg0NDY4MTMgMTA4LjQwOTE2OTEgNzUuNDU3MjA3MFxuICAgICAgICAgICAgIFssNF1cblsxLF0gICAwLjM1MDU3NTg1XG5bMixdICAtMS43ODQ4ODgyMlxuWzMsXSAgLTAuMDUxNzcwMjhcbls0LF0gIC0wLjkxMTc0MDUwXG5bNSxdIDEwMi4xMTYzMDEzNVxuWzYsXSAxMTUuNTgxNTAwODBcbls3LF0gIDg0LjE5NTg3OTc5XG5bOCxdICA4Ni41OTUzNjU1OVxuIn0= -->
-<pre><code>            [,1]        [,2]       [,3]
-[1,]  -2.6718267   0.9679184 -0.8254162
-[2,]  -1.2556032   0.8914526 -0.8464597
-[3,]  -0.1603780  -1.2716563 -0.5034923
-[4,]   0.3875234   1.1472395  0.6246130
-[5,] 100.0031495  96.4947158 82.1002087
-[6,]  91.3827432  90.0248414 91.9333867
-[7,]  86.3346715  92.9519086 97.9451035
-[8,] 107.8446813 108.4091691 75.4572070
-             [,4]
-[1,]   0.35057585
-[2,]  -1.78488822
-[3,]  -0.05177028
-[4,]  -0.91174050
-[5,] 102.11630135
-[6,] 115.58150080
-[7,]  84.19587979
-[8,]  86.59536559</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDE3XG4ifQ== -->
+<pre><code>[1] 17</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2JpbmQoTUEsTUIpXG5gYGAifQ== -->
-<pre class="r"><code>cbind(MA,MB)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICBbLDFdICAgICAgIFssMl0gICAgICAgWywzXVxuWzEsXSAtMi42NzE4MjY3ICAwLjk2NzkxODQgLTAuODI1NDE2MlxuWzIsXSAtMS4yNTU2MDMyICAwLjg5MTQ1MjYgLTAuODQ2NDU5N1xuWzMsXSAtMC4xNjAzNzgwIC0xLjI3MTY1NjMgLTAuNTAzNDkyM1xuWzQsXSAgMC4zODc1MjM0ICAxLjE0NzIzOTUgIDAuNjI0NjEzMFxuICAgICAgICAgICAgWyw0XSAgICAgIFssNV0gICAgICBbLDZdXG5bMSxdICAwLjM1MDU3NTg1IDEwMC4wMDMxNSAgOTYuNDk0NzJcblsyLF0gLTEuNzg0ODg4MjIgIDkxLjM4Mjc0ICA5MC4wMjQ4NFxuWzMsXSAtMC4wNTE3NzAyOCAgODYuMzM0NjcgIDkyLjk1MTkxXG5bNCxdIC0wLjkxMTc0MDUwIDEwNy44NDQ2OCAxMDguNDA5MTdcbiAgICAgICAgIFssN10gICAgICBbLDhdXG5bMSxdIDgyLjEwMDIxIDEwMi4xMTYzMFxuWzIsXSA5MS45MzMzOSAxMTUuNTgxNTBcblszLF0gOTcuOTQ1MTAgIDg0LjE5NTg4XG5bNCxdIDc1LjQ1NzIxICA4Ni41OTUzN1xuIn0= -->
-<pre><code>           [,1]       [,2]       [,3]
-[1,] -2.6718267  0.9679184 -0.8254162
-[2,] -1.2556032  0.8914526 -0.8464597
-[3,] -0.1603780 -1.2716563 -0.5034923
-[4,]  0.3875234  1.1472395  0.6246130
-            [,4]      [,5]      [,6]
-[1,]  0.35057585 100.00315  96.49472
-[2,] -1.78488822  91.38274  90.02484
-[3,] -0.05177028  86.33467  92.95191
-[4,] -0.91174050 107.84468 108.40917
-         [,7]      [,8]
-[1,] 82.10021 102.11630
-[2,] 91.93339 115.58150
-[3,] 97.94510  84.19588
-[4,] 75.45721  86.59537</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUFbMToyLDE6Ml1cbmBgYCJ9 -->
-<pre class="r"><code>MA[1:2,1:2]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgIFssMV0gICAgICBbLDJdXG5bMSxdIC0yLjY3MTgyNyAwLjk2NzkxODRcblsyLF0gLTEuMjU1NjAzIDAuODkxNDUyNlxuIn0= -->
-<pre><code>          [,1]      [,2]
-[1,] -2.671827 0.9679184
-[2,] -1.255603 0.8914526</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUJbMzo0LDM6NF1cbmBgYCJ9 -->
-<pre class="r"><code>MB[3:4,3:4]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgWywxXSAgICAgWywyXVxuWzEsXSA5Ny45NDUxMCA4NC4xOTU4OFxuWzIsXSA3NS40NTcyMSA4Ni41OTUzN1xuIn0= -->
-<pre><code>         [,1]     [,2]
-[1,] 97.94510 84.19588
-[2,] 75.45721 86.59537</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2JpbmQoTUFbMToyLDE6Ml0sTUJbMzo0LDM6NF0pXG5gYGAifQ== -->
-<pre class="r"><code>cbind(MA[1:2,1:2],MB[3:4,3:4])</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgIFssMV0gICAgICBbLDJdICAgICBbLDNdICAgICBbLDRdXG5bMSxdIC0yLjY3MTgyNyAwLjk2NzkxODQgOTcuOTQ1MTAgODQuMTk1ODhcblsyLF0gLTEuMjU1NjAzIDAuODkxNDUyNiA3NS40NTcyMSA4Ni41OTUzN1xuIn0= -->
-<pre><code>          [,1]      [,2]     [,3]     [,4]
-[1,] -2.671827 0.9679184 97.94510 84.19588
-[2,] -1.255603 0.8914526 75.45721 86.59537</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="matris-isimlendirme" class="section level2">
-<h2>Matris Isimlendirme</h2>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudjE8LSBjKDEsMiwzLDQsNSlcbnYyPC0gYygyLDMsNCw1LDYpXG52MzwtIGMoMyw0LDUsNiw3KVxudjQ8LSBjKDQsNSw2LDcsOClcbnY8LWNiaW5kKHYxLHYyLHYzLHY0KVxuY29sbmFtZXModikgPC0gYyhcImJpclwiLFwiaWtpXCIsXCJ1Y1wiLFwiZG9ydFwiKVxucm93bmFtZXModikgPC0gYyhcImJpclwiLFwiaWtpXCIsXCJ1Y1wiLFwiZG9ydFwiLFwiYmVzXCIpXG5kZXZfbSA8LSBtYXRyaXgoMToxMDAwMCxuY29sID0gNSxucm93PTUwMClcbnJvd25hbWVzKGRldl9tKTwtYyhwYXN0ZShcIm11c3RlcmlfaWRcIiwxOjUwMCxzZXAgPVwiX1wiKSlcbmBgYCJ9 -->
-<pre class="r"><code>v1&lt;- c(1,2,3,4,5)
-v2&lt;- c(2,3,4,5,6)
-v3&lt;- c(3,4,5,6,7)
-v4&lt;- c(4,5,6,7,8)
-v&lt;-cbind(v1,v2,v3,v4)
-colnames(v) &lt;- c(&quot;bir&quot;,&quot;iki&quot;,&quot;uc&quot;,&quot;dort&quot;)
-rownames(v) &lt;- c(&quot;bir&quot;,&quot;iki&quot;,&quot;uc&quot;,&quot;dort&quot;,&quot;bes&quot;)
-dev_m &lt;- matrix(1:10000,ncol = 5,nrow=500)
-rownames(dev_m)&lt;-c(paste(&quot;musteri_id&quot;,1:500,sep =&quot;_&quot;))</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-</div>
-<div id="matris-eleman-islemleri" class="section level1">
-<h1>3. Matris Eleman Islemleri</h1>
-<div id="matris-indeksi-ve-eleman-secimi" class="section level2">
-<h2>Matris Indeksi ve Eleman Secimi</h2>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTTwtbWF0cml4KGMoMSwyLDExLDIyLDExMSwyMjIsMTExMSwyMjIyKSxucm93PTQsbmNvbCA9IDIsYnlyb3cgPSBUUlVFKVxuY29sbmFtZXMoTSkgPC0gYyhcImJpclwiLFwiaWtpXCIpXG5yb3duYW1lcyhNKSA8LSBjKFwicmFrYW1cIixcIm9ubGFyXCIsXCJ5dXpsZVwiLFwiYmlubGVyXCIpXG4jIEVsZW1hbiBTZWNtZVxuTVsxLDFdXG5gYGAifQ== -->
-<pre class="r"><code>M&lt;-matrix(c(1,2,11,22,111,222,1111,2222),nrow=4,ncol = 2,byrow = TRUE)
-colnames(M) &lt;- c(&quot;bir&quot;,&quot;iki&quot;)
-rownames(M) &lt;- c(&quot;rakam&quot;,&quot;onlar&quot;,&quot;yuzle&quot;,&quot;binler&quot;)
-# Eleman Secme
-M[1,1]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDFcbiJ9 -->
-<pre><code>[1] 1</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTVszLDFdXG5gYGAifQ== -->
-<pre class="r"><code>M[3,1]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDExMVxuIn0= -->
-<pre><code>[1] 111</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTVsyLDJdXG5gYGAifQ== -->
-<pre class="r"><code>M[2,2]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDIyXG4ifQ== -->
-<pre><code>[1] 22</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBTYXRpciBTZWNtZVxuTVsxLF1cbmBgYCJ9 -->
-<pre class="r"><code># Satir Secme
-M[1,]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiYmlyIGlraSBcbiAgMSAgIDIgXG4ifQ== -->
-<pre><code>bir iki 
-  1   2 </code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTVsxOjIsXVxuYGBgIn0= -->
-<pre class="r"><code>M[1:2,]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgYmlyIGlraVxucmFrYW0gICAxICAgMlxub25sYXIgIDExICAyMlxuIn0= -->
-<pre><code>      bir iki
-rakam   1   2
-onlar  11  22</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTVtjKDEsNCksXVxuYGBgIn0= -->
-<pre class="r"><code>M[c(1,4),]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICBiaXIgIGlraVxucmFrYW0gICAgIDEgICAgMlxuYmlubGVyIDExMTEgMjIyMlxuIn0= -->
-<pre><code>        bir  iki
-rakam     1    2
-binler 1111 2222</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBTdXR1biBTZWNtZVxuTVssMV1cbmBgYCJ9 -->
-<pre class="r"><code># Sutun Secme
-M[,1]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIHJha2FtICBvbmxhciAgeXV6bGUgYmlubGVyIFxuICAgICAxICAgICAxMSAgICAxMTEgICAxMTExIFxuIn0= -->
-<pre><code> rakam  onlar  yuzle binler 
-     1     11    111   1111 </code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTVssMToyXVxuYGBgIn0= -->
-<pre class="r"><code>M[,1:2]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICBiaXIgIGlraVxucmFrYW0gICAgIDEgICAgMlxub25sYXIgICAgMTEgICAyMlxueXV6bGUgICAxMTEgIDIyMlxuYmlubGVyIDExMTEgMjIyMlxuIn0= -->
-<pre><code>        bir  iki
-rakam     1    2
-onlar    11   22
-yuzle   111  222
-binler 1111 2222</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubTwtbWF0cml4KHJub3JtKDI1KSwxMCwxMClcbm1bMTo1LDU6N11cbmBgYCJ9 -->
-<pre class="r"><code>m&lt;-matrix(rnorm(25),10,10)
-m[1:5,5:7]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICBbLDFdICAgICAgICBbLDJdICAgICAgIFssM11cblsxLF0gLTAuMzQ3MjIzMCAgMC4xNTE1ODI4NCAgMC42NzI5MTYyXG5bMixdICAwLjkwOTE5OTUgLTAuMDc3MjgzODkgLTAuMTAxNzk2M1xuWzMsXSAtMS40MzI4MDA1ICAwLjEzNzU1NTk4ICAxLjM1NTkyOThcbls0LF0gIDAuNTAyOTUyMyAgMC41NzIyNzk5NyAtMC4zMzA1MDIzXG5bNSxdIC0wLjI2NjIyODAgIDEuOTMzMTE5NDYgIDAuODE0ODA4OVxuIn0= -->
-<pre><code>           [,1]        [,2]       [,3]
-[1,] -0.3472230  0.15158284  0.6729162
-[2,]  0.9091995 -0.07728389 -0.1017963
-[3,] -1.4328005  0.13755598  1.3559298
-[4,]  0.5029523  0.57227997 -0.3305023
-[5,] -0.2662280  1.93311946  0.8148089</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29sbmFtZXMobSkgPC0gYyhwYXN0ZShcInN1dHVuXCIsMToxMCxzZXAgPSBcIi1cIikpXG5yb3duYW1lcyhtKSA8LSBjKHBhc3RlKFwic2F0aXJcIiwxOjEwLHNlcCA9IFwiLVwiKSlcbm1cbmBgYCJ9 -->
-<pre class="r"><code>colnames(m) &lt;- c(paste(&quot;sutun&quot;,1:10,sep = &quot;-&quot;))
-rownames(m) &lt;- c(paste(&quot;satir&quot;,1:10,sep = &quot;-&quot;))
-m</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgIHN1dHVuLTEgICAgc3V0dW4tMiAgICAgc3V0dW4tM1xuc2F0aXItMSAgIDAuMTUxNTgyODQgIDAuNjcyOTE2MiAgMC4yNDMwOTA5NVxuc2F0aXItMiAgLTAuMDc3MjgzODkgLTAuMTAxNzk2MyAgMC4yMzE1NTExOFxuc2F0aXItMyAgIDAuMTM3NTU1OTggIDEuMzU1OTI5OCAtMC4wNTY3MTAxMlxuc2F0aXItNCAgIDAuNTcyMjc5OTcgLTAuMzMwNTAyMyAtMC4wNDY2NTgwNlxuc2F0aXItNSAgIDEuOTMzMTE5NDYgIDAuODE0ODA4OSAtMC4yMTQ5ODMyMlxuc2F0aXItNiAgIDEuNDEzNDMzMTQgLTAuMzQ3MjIzMCAgMC4xNTE1ODI4NFxuc2F0aXItNyAgIDAuNzA0Mzk2NDMgIDAuOTA5MTk5NSAtMC4wNzcyODM4OVxuc2F0aXItOCAgLTAuMTI4OTMyMDkgLTEuNDMyODAwNSAgMC4xMzc1NTU5OFxuc2F0aXItOSAgLTAuMzE5MzMwNTUgIDAuNTAyOTUyMyAgMC41NzIyNzk5N1xuc2F0aXItMTAgLTEuNDA0MTM3MzIgLTAuMjY2MjI4MCAgMS45MzMxMTk0NlxuICAgICAgICAgICAgc3V0dW4tNCAgICAgc3V0dW4tNSAgICAgc3V0dW4tNlxuc2F0aXItMSAgIDEuNDEzNDMzMSAtMC4zNDcyMjI5OCAgMC4xNTE1ODI4NFxuc2F0aXItMiAgIDAuNzA0Mzk2NCAgMC45MDkxOTk0NyAtMC4wNzcyODM4OVxuc2F0aXItMyAgLTAuMTI4OTMyMSAtMS40MzI4MDA1MCAgMC4xMzc1NTU5OFxuc2F0aXItNCAgLTAuMzE5MzMwNSAgMC41MDI5NTIzNCAgMC41NzIyNzk5N1xuc2F0aXItNSAgLTEuNDA0MTM3MyAtMC4yNjYyMjgwMyAgMS45MzMxMTk0Nlxuc2F0aXItNiAgIDAuNjcyOTE2MiAgMC4yNDMwOTA5NSAgMS40MTM0MzMxNFxuc2F0aXItNyAgLTAuMTAxNzk2MyAgMC4yMzE1NTExOCAgMC43MDQzOTY0M1xuc2F0aXItOCAgIDEuMzU1OTI5OCAtMC4wNTY3MTAxMiAtMC4xMjg5MzIwOVxuc2F0aXItOSAgLTAuMzMwNTAyMyAtMC4wNDY2NTgwNiAtMC4zMTkzMzA1NVxuc2F0aXItMTAgIDAuODE0ODA4OSAtMC4yMTQ5ODMyMiAtMS40MDQxMzczMlxuICAgICAgICAgICAgc3V0dW4tNyAgICAgc3V0dW4tOCAgICBzdXR1bi05XG5zYXRpci0xICAgMC42NzI5MTYyICAwLjI0MzA5MDk1ICAxLjQxMzQzMzFcbnNhdGlyLTIgIC0wLjEwMTc5NjMgIDAuMjMxNTUxMTggIDAuNzA0Mzk2NFxuc2F0aXItMyAgIDEuMzU1OTI5OCAtMC4wNTY3MTAxMiAtMC4xMjg5MzIxXG5zYXRpci00ICAtMC4zMzA1MDIzIC0wLjA0NjY1ODA2IC0wLjMxOTMzMDVcbnNhdGlyLTUgICAwLjgxNDgwODkgLTAuMjE0OTgzMjIgLTEuNDA0MTM3M1xuc2F0aXItNiAgLTAuMzQ3MjIzMCAgMC4xNTE1ODI4NCAgMC42NzI5MTYyXG5zYXRpci03ICAgMC45MDkxOTk1IC0wLjA3NzI4Mzg5IC0wLjEwMTc5NjNcbnNhdGlyLTggIC0xLjQzMjgwMDUgIDAuMTM3NTU1OTggIDEuMzU1OTI5OFxuc2F0aXItOSAgIDAuNTAyOTUyMyAgMC41NzIyNzk5NyAtMC4zMzA1MDIzXG5zYXRpci0xMCAtMC4yNjYyMjgwICAxLjkzMzExOTQ2ICAwLjgxNDgwODlcbiAgICAgICAgICAgIHN1dHVuLTEwXG5zYXRpci0xICAtMC4zNDcyMjI5OFxuc2F0aXItMiAgIDAuOTA5MTk5NDdcbnNhdGlyLTMgIC0xLjQzMjgwMDUwXG5zYXRpci00ICAgMC41MDI5NTIzNFxuc2F0aXItNSAgLTAuMjY2MjI4MDNcbnNhdGlyLTYgICAwLjI0MzA5MDk1XG5zYXRpci03ICAgMC4yMzE1NTExOFxuc2F0aXItOCAgLTAuMDU2NzEwMTJcbnNhdGlyLTkgIC0wLjA0NjY1ODA2XG5zYXRpci0xMCAtMC4yMTQ5ODMyMlxuIn0= -->
-<pre><code>             sutun-1    sutun-2     sutun-3
-satir-1   0.15158284  0.6729162  0.24309095
-satir-2  -0.07728389 -0.1017963  0.23155118
-satir-3   0.13755598  1.3559298 -0.05671012
-satir-4   0.57227997 -0.3305023 -0.04665806
-satir-5   1.93311946  0.8148089 -0.21498322
-satir-6   1.41343314 -0.3472230  0.15158284
-satir-7   0.70439643  0.9091995 -0.07728389
-satir-8  -0.12893209 -1.4328005  0.13755598
-satir-9  -0.31933055  0.5029523  0.57227997
-satir-10 -1.40413732 -0.2662280  1.93311946
-            sutun-4     sutun-5     sutun-6
-satir-1   1.4134331 -0.34722298  0.15158284
-satir-2   0.7043964  0.90919947 -0.07728389
-satir-3  -0.1289321 -1.43280050  0.13755598
-satir-4  -0.3193305  0.50295234  0.57227997
-satir-5  -1.4041373 -0.26622803  1.93311946
-satir-6   0.6729162  0.24309095  1.41343314
-satir-7  -0.1017963  0.23155118  0.70439643
-satir-8   1.3559298 -0.05671012 -0.12893209
-satir-9  -0.3305023 -0.04665806 -0.31933055
-satir-10  0.8148089 -0.21498322 -1.40413732
-            sutun-7     sutun-8    sutun-9
-satir-1   0.6729162  0.24309095  1.4134331
-satir-2  -0.1017963  0.23155118  0.7043964
-satir-3   1.3559298 -0.05671012 -0.1289321
-satir-4  -0.3305023 -0.04665806 -0.3193305
-satir-5   0.8148089 -0.21498322 -1.4041373
-satir-6  -0.3472230  0.15158284  0.6729162
-satir-7   0.9091995 -0.07728389 -0.1017963
-satir-8  -1.4328005  0.13755598  1.3559298
-satir-9   0.5029523  0.57227997 -0.3305023
-satir-10 -0.2662280  1.93311946  0.8148089
-            sutun-10
-satir-1  -0.34722298
-satir-2   0.90919947
-satir-3  -1.43280050
-satir-4   0.50295234
-satir-5  -0.26622803
-satir-6   0.24309095
-satir-7   0.23155118
-satir-8  -0.05671012
-satir-9  -0.04665806
-satir-10 -0.21498322</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubVssXCJzdXR1bi0yXCJdXG5gYGAifQ== -->
-<pre class="r"><code>m[,&quot;sutun-2&quot;]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgc2F0aXItMSAgICBzYXRpci0yICAgIHNhdGlyLTMgICAgc2F0aXItNCBcbiAwLjY3MjkxNjIgLTAuMTAxNzk2MyAgMS4zNTU5Mjk4IC0wLjMzMDUwMjMgXG4gICBzYXRpci01ICAgIHNhdGlyLTYgICAgc2F0aXItNyAgICBzYXRpci04IFxuIDAuODE0ODA4OSAtMC4zNDcyMjMwICAwLjkwOTE5OTUgLTEuNDMyODAwNSBcbiAgIHNhdGlyLTkgICBzYXRpci0xMCBcbiAwLjUwMjk1MjMgLTAuMjY2MjI4MCBcbiJ9 -->
-<pre><code>   satir-1    satir-2    satir-3    satir-4 
- 0.6729162 -0.1017963  1.3559298 -0.3305023 
-   satir-5    satir-6    satir-7    satir-8 
- 0.8148089 -0.3472230  0.9091995 -1.4328005 
-   satir-9   satir-10 
- 0.5029523 -0.2662280 </code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubVtcInNhdGlyLTJcIixdXG5gYGAifQ== -->
-<pre class="r"><code>m[&quot;satir-2&quot;,]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgIHN1dHVuLTEgICAgIHN1dHVuLTIgICAgIHN1dHVuLTMgICAgIHN1dHVuLTQgXG4tMC4wNzcyODM4OSAtMC4xMDE3OTYzMiAgMC4yMzE1NTExOCAgMC43MDQzOTY0MyBcbiAgICBzdXR1bi01ICAgICBzdXR1bi02ICAgICBzdXR1bi03ICAgICBzdXR1bi04IFxuIDAuOTA5MTk5NDcgLTAuMDc3MjgzODkgLTAuMTAxNzk2MzIgIDAuMjMxNTUxMTggXG4gICAgc3V0dW4tOSAgICBzdXR1bi0xMCBcbiAwLjcwNDM5NjQzICAwLjkwOTE5OTQ3IFxuIn0= -->
-<pre><code>    sutun-1     sutun-2     sutun-3     sutun-4 
--0.07728389 -0.10179632  0.23155118  0.70439643 
-    sutun-5     sutun-6     sutun-7     sutun-8 
- 0.90919947 -0.07728389 -0.10179632  0.23155118 
-    sutun-9    sutun-10 
- 0.70439643  0.90919947 </code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubTwtbWF0cml4KDE6MTAwMCw1MCwxMClcbmRpbShtKVxuYGBgIn0= -->
-<pre class="r"><code>m&lt;-matrix(1:1000,50,10)
-dim(m)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDUwIDEwXG4ifQ== -->
-<pre><code>[1] 50 10</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29sbmFtZXMobSkgPC0gYyhwYXN0ZShcImRlZ2lza2VuXCIsMToxMCxzZXAgPSBcIl9cIikpXG5tWyxcImRlZ2lza2VuXzFcIl1cbmBgYCJ9 -->
-<pre class="r"><code>colnames(m) &lt;- c(paste(&quot;degisken&quot;,1:10,sep = &quot;_&quot;))
-m[,&quot;degisken_1&quot;]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSAgMSAgMiAgMyAgNCAgNSAgNiAgNyAgOCAgOSAxMCAxMSAxMiAxMyAxNCAxNSAxNlxuWzE3XSAxNyAxOCAxOSAyMCAyMSAyMiAyMyAyNCAyNSAyNiAyNyAyOCAyOSAzMCAzMSAzMlxuWzMzXSAzMyAzNCAzNSAzNiAzNyAzOCAzOSA0MCA0MSA0MiA0MyA0NCA0NSA0NiA0NyA0OFxuWzQ5XSA0OSA1MFxuIn0= -->
-<pre><code> [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
-[17] 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32
-[33] 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48
-[49] 49 50</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWVhbihtWyxcImRlZ2lza2VuXzFcIl0pXG5gYGAifQ== -->
-<pre class="r"><code>mean(m[,&quot;degisken_1&quot;])</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDI1LjVcbiJ9 -->
-<pre><code>[1] 25.5</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuY2hhcmFjdGVyKHJvdW5kKHNxcnQobWVhbihtWyxcImRlZ2lza2VuXzFcIl0pKSkpXG5gYGAifQ== -->
-<pre class="r"><code>as.character(round(sqrt(mean(m[,&quot;degisken_1&quot;]))))</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiNVwiXG4ifQ== -->
-<pre><code>[1] &quot;5&quot;</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29sbmFtZXMobSlbMV08LWFzLmNoYXJhY3RlcihzcXJ0KHJvdW5kKHNxcnQobWVhbihtWyxcImRlZ2lza2VuXzFcIl0pKSkpKVxuY29sbmFtZXMobSk8LWFzLmNoYXJhY3Rlcihyb3VuZChzcXJ0KGFwcGx5KG0sMixtZWFuKSkpKVxuYGBgIn0= -->
-<pre class="r"><code>colnames(m)[1]&lt;-as.character(sqrt(round(sqrt(mean(m[,&quot;degisken_1&quot;])))))
-colnames(m)&lt;-as.character(round(sqrt(apply(m,2,mean))))</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="kosullu-eleman-secimi" class="section level2">
-<h2>Kosullu Eleman Secimi</h2>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubTwtIG1hdHJpeCgxOjI1LDUsNSlcbm1cbmBgYCJ9 -->
-<pre class="r"><code>m&lt;- matrix(1:25,5,5)
-m</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXSBbLDRdIFssNV1cblsxLF0gICAgMSAgICA2ICAgMTEgICAxNiAgIDIxXG5bMixdICAgIDIgICAgNyAgIDEyICAgMTcgICAyMlxuWzMsXSAgICAzICAgIDggICAxMyAgIDE4ICAgMjNcbls0LF0gICAgNCAgICA5ICAgMTQgICAxOSAgIDI0XG5bNSxdICAgIDUgICAxMCAgIDE1ICAgMjAgICAyNVxuIn0= -->
-<pre><code>     [,1] [,2] [,3] [,4] [,5]
-[1,]    1    6   11   16   21
-[2,]    2    7   12   17   22
-[3,]    3    8   13   18   23
-[4,]    4    9   14   19   24
-[5,]    5   10   15   20   25</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubVssMV0gPiAyXG5gYGAifQ== -->
-<pre class="r"><code>m[,1] &gt; 2</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIEZBTFNFIEZBTFNFICBUUlVFICBUUlVFICBUUlVFXG4ifQ== -->
-<pre><code>[1] FALSE FALSE  TRUE  TRUE  TRUE</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubVttWywxXSA+IDIsXVxuYGBgIn0= -->
-<pre class="r"><code>m[m[,1] &gt; 2,]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXSBbLDRdIFssNV1cblsxLF0gICAgMyAgICA4ICAgMTMgICAxOCAgIDIzXG5bMixdICAgIDQgICAgOSAgIDE0ICAgMTkgICAyNFxuWzMsXSAgICA1ICAgMTAgICAxNSAgIDIwICAgMjVcbiJ9 -->
-<pre><code>     [,1] [,2] [,3] [,4] [,5]
-[1,]    3    8   13   18   23
-[2,]    4    9   14   19   24
-[3,]    5   10   15   20   25</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubVttWywxXSA+IDIsMV1cbmBgYCJ9 -->
-<pre class="r"><code>m[m[,1] &gt; 2,1]</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmNoYXIoYyhcImFsaVwiLFwidmVsaVwiLFwiYWhtZXRcIikpXG5gYGAifQ== -->
+<pre class="r"><code>nchar(c(&quot;ali&quot;,&quot;veli&quot;,&quot;ahmet&quot;))</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIDMgNCA1XG4ifQ== -->
 <pre><code>[1] 3 4 5</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyMjI1xubWVhbihtWywxXSlcbmBgYCJ9 -->
-<pre class="r"><code>####
-mean(m[,1])</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGVuZ3RoKGMoXCJhbGlcIixcInZlbGlcIixcImFobWV0XCIpKVxuYGBgIn0= -->
+<pre class="r"><code>length(c(&quot;ali&quot;,&quot;veli&quot;,&quot;ahmet&quot;))</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIDNcbiJ9 -->
 <pre><code>[1] 3</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubVttWywxXT5tZWFuKG1bLDFdKSwxXVxuYGBgIn0= -->
-<pre class="r"><code>m[m[,1]&gt;mean(m[,1]),1]</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGVuZ3RoKFwiVHVyaGFuIENhbiBLYXJnaW5cIilcbmBgYCJ9 -->
+<pre class="r"><code>length(&quot;Turhan Can Kargin&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDQgNVxuIn0= -->
-<pre><code>[1] 4 5</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDFcbiJ9 -->
+<pre><code>[1] 1</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyMjI1xubWVhbihtWyw0XSlcbmBgYCJ9 -->
-<pre class="r"><code>####
-mean(m[,4])</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudG9sb3dlcihcIkJVIEJ1eXVrIEJpciBDVU1MRVwiKVxuYGBgIn0= -->
+<pre class="r"><code>tolower(&quot;BU Buyuk Bir CUMLE&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDE4XG4ifQ== -->
-<pre><code>[1] 18</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiYnUgYnV5dWsgYmlyIGN1bWxlXCJcbiJ9 -->
+<pre><code>[1] &quot;bu buyuk bir cumle&quot;</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubVttWywyXTxtZWFuKG1bLDRdKSwyXVxuYGBgIn0= -->
-<pre class="r"><code>m[m[,2]&lt;mean(m[,4]),2]</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudG91cHBlcihcImJ1IGt1Y3VrIEJpciBDVU1sZVwiKVxuYGBgIn0= -->
+<pre class="r"><code>toupper(&quot;bu kucuk Bir CUMle&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdICA2ICA3ICA4ICA5IDEwXG4ifQ== -->
-<pre><code>[1]  6  7  8  9 10</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiQlUgS1VDVUsgQklSIENVTUxFXCJcbiJ9 -->
+<pre><code>[1] &quot;BU KUCUK BIR CUMLE&quot;</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-</div>
-<div id="matris-hesaplama" class="section level1">
-<h1>4. Matris Hesaplama</h1>
-<div id="matematiksel-islemler" class="section level2">
-<h2>Matematiksel Islemler</h2>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQTwtbWF0cml4KDE6OSwzLDMpXG5BXG5gYGAifQ== -->
-<pre class="r"><code>A&lt;-matrix(1:9,3,3)
-A</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudG91cHBlcihjKFwiYWxpXCIsXCJ2ZWxpXCIsXCJhaG1ldFwiKSlcbmBgYCJ9 -->
+<pre class="r"><code>toupper(c(&quot;ali&quot;,&quot;veli&quot;,&quot;ahmet&quot;))</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXVxuWzEsXSAgICAxICAgIDQgICAgN1xuWzIsXSAgICAyICAgIDUgICAgOFxuWzMsXSAgICAzICAgIDYgICAgOVxuIn0= -->
-<pre><code>     [,1] [,2] [,3]
-[1,]    1    4    7
-[2,]    2    5    8
-[3,]    3    6    9</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiQUxJXCIgICBcIlZFTElcIiAgXCJBSE1FVFwiXG4ifQ== -->
+<pre><code>[1] &quot;ALI&quot;   &quot;VELI&quot;  &quot;AHMET&quot;</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQjwtbWF0cml4KDE6OSwzLDMpXG5BK0JcbmBgYCJ9 -->
-<pre class="r"><code>B&lt;-matrix(1:9,3,3)
-A+B</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2hhcnRyKFwibFwiLFwiTFwiLFwibGFsZWxpbGVuIGxhbGUgYWxkaW1cIilcbmBgYCJ9 -->
+<pre class="r"><code>chartr(&quot;l&quot;,&quot;L&quot;,&quot;lalelilen lale aldim&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXVxuWzEsXSAgICAyICAgIDggICAxNFxuWzIsXSAgICA0ICAgMTAgICAxNlxuWzMsXSAgICA2ICAgMTIgICAxOFxuIn0= -->
-<pre><code>     [,1] [,2] [,3]
-[1,]    2    8   14
-[2,]    4   10   16
-[3,]    6   12   18</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiTGFMZUxpTGVuIExhTGUgYUxkaW1cIlxuIn0= -->
+<pre><code>[1] &quot;LaLeLiLen LaLe aLdim&quot;</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQS1CXG5gYGAifQ== -->
-<pre class="r"><code>A-B</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmVua2xlcjwtIGNvbG9ycygpWzE6Nl1cbmFiYnJldmlhdGUocmVua2xlcilcbmBgYCJ9 -->
+<pre class="r"><code>renkler&lt;- colors()[1:6]
+abbreviate(renkler)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXVxuWzEsXSAgICAwICAgIDAgICAgMFxuWzIsXSAgICAwICAgIDAgICAgMFxuWzMsXSAgICAwICAgIDAgICAgMFxuIn0= -->
-<pre><code>     [,1] [,2] [,3]
-[1,]    0    0    0
-[2,]    0    0    0
-[3,]    0    0    0</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICB3aGl0ZSAgICAgYWxpY2VibHVlICBhbnRpcXVld2hpdGUgYW50aXF1ZXdoaXRlMSBhbnRpcXVld2hpdGUyIGFudGlxdWV3aGl0ZTMgXG4gICAgICAgXCJ3aGl0XCIgICAgICAgIFwiYWxjYlwiICAgICAgICBcImFudHFcIiAgICAgICAgXCJhbnQxXCIgICAgICAgIFwiYW50MlwiICAgICAgICBcImFudDNcIiBcbiJ9 -->
+<pre><code>        white     aliceblue  antiquewhite antiquewhite1 antiquewhite2 antiquewhite3 
+       &quot;whit&quot;        &quot;alcb&quot;        &quot;antq&quot;        &quot;ant1&quot;        &quot;ant2&quot;        &quot;ant3&quot; </code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQS9CXG5gYGAifQ== -->
-<pre class="r"><code>A/B</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYWJicmV2aWF0ZShyZW5rbGVyLG1pbmxlbmd0aCA9IDUpXG5gYGAifQ== -->
+<pre class="r"><code>abbreviate(renkler,minlength = 5)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXVxuWzEsXSAgICAxICAgIDEgICAgMVxuWzIsXSAgICAxICAgIDEgICAgMVxuWzMsXSAgICAxICAgIDEgICAgMVxuIn0= -->
-<pre><code>     [,1] [,2] [,3]
-[1,]    1    1    1
-[2,]    1    1    1
-[3,]    1    1    1</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICB3aGl0ZSAgICAgYWxpY2VibHVlICBhbnRpcXVld2hpdGUgYW50aXF1ZXdoaXRlMSBhbnRpcXVld2hpdGUyIGFudGlxdWV3aGl0ZTMgXG4gICAgICBcIndoaXRlXCIgICAgICAgXCJhbGNibFwiICAgICAgIFwiYW50cXdcIiAgICAgICBcImFudHExXCIgICAgICAgXCJhbnRxMlwiICAgICAgIFwiYW50cTNcIiBcbiJ9 -->
+<pre><code>        white     aliceblue  antiquewhite antiquewhite1 antiquewhite2 antiquewhite3 
+      &quot;white&quot;       &quot;alcbl&quot;       &quot;antqw&quot;       &quot;antq1&quot;       &quot;antq2&quot;       &quot;antq3&quot; </code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQSpCXG5gYGAifQ== -->
-<pre class="r"><code>A*B</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3Vic3RyKFwiVHVyaGFuXCIsMiw0KVxuYGBgIn0= -->
+<pre class="r"><code>substr(&quot;Turhan&quot;,2,4)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXVxuWzEsXSAgICAxICAgMTYgICA0OVxuWzIsXSAgICA0ICAgMjUgICA2NFxuWzMsXSAgICA5ICAgMzYgICA4MVxuIn0= -->
-<pre><code>     [,1] [,2] [,3]
-[1,]    1   16   49
-[2,]    4   25   64
-[3,]    9   36   81</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwidXJoXCJcbiJ9 -->
+<pre><code>[1] &quot;urh&quot;</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQSo4XG5gYGAifQ== -->
-<pre class="r"><code>A*8</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDwtYyhcImJpclwiLFwiaWtpXCIsXCJ1Y1wiKVxuc3Vic3RyKHgsMiwyKSA8LSBcIiNcIlxuIyBncmVwKClcbnY8LWMoXCJiaXJcIixcInVjXCIsXCJvbmJpclwiLFwiYmlyXCIsXCJ5aXJtaVwiLFwib3R1emJpclwiKVxuZ3JlcChcImJpclwiLHYpXG5gYGAifQ== -->
+<pre class="r"><code>x&lt;-c(&quot;bir&quot;,&quot;iki&quot;,&quot;uc&quot;)
+substr(x,2,2) &lt;- &quot;#&quot;
+# grep()
+v&lt;-c(&quot;bir&quot;,&quot;uc&quot;,&quot;onbir&quot;,&quot;bir&quot;,&quot;yirmi&quot;,&quot;otuzbir&quot;)
+grep(&quot;bir&quot;,v)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXVxuWzEsXSAgICA4ICAgMzIgICA1NlxuWzIsXSAgIDE2ICAgNDAgICA2NFxuWzMsXSAgIDI0ICAgNDggICA3MlxuIn0= -->
-<pre><code>     [,1] [,2] [,3]
-[1,]    8   32   56
-[2,]   16   40   64
-[3,]   24   48   72</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEgMyA0IDZcbiJ9 -->
+<pre><code>[1] 1 3 4 6</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQVsxLDJdK0JbMywzXSAtIDEwXG5gYGAifQ== -->
-<pre class="r"><code>A[1,2]+B[3,3] - 10</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI3N1YigpXG5zdWIoXCJiaXJcIixcImlraVwiLHYpXG5gYGAifQ== -->
+<pre class="r"><code>#sub()
+sub(&quot;bir&quot;,&quot;iki&quot;,v)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDNcbiJ9 -->
-<pre><code>[1] 3</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtKEEpXG5gYGAifQ== -->
-<pre class="r"><code>sum(A)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDQ1XG4ifQ== -->
-<pre><code>[1] 45</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWVhbihBKVxuYGBgIn0= -->
-<pre class="r"><code>mean(A)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDVcbiJ9 -->
-<pre><code>[1] 5</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucm93U3VtcyhBKVxuYGBgIn0= -->
-<pre class="r"><code>rowSums(A)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEyIDE1IDE4XG4ifQ== -->
-<pre><code>[1] 12 15 18</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29sU3VtcyhBKVxuYGBgIn0= -->
-<pre class="r"><code>colSums(A)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdICA2IDE1IDI0XG4ifQ== -->
-<pre><code>[1]  6 15 24</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucm93TWVhbnMoQSlcbmBgYCJ9 -->
-<pre class="r"><code>rowMeans(A)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDQgNSA2XG4ifQ== -->
-<pre><code>[1] 4 5 6</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaWtpXCIgICAgIFwidWNcIiAgICAgIFwib25pa2lcIiAgIFwiaWtpXCIgICAgIFwieWlybWlcIiAgIFwib3R1emlraVwiXG4ifQ== -->
+<pre><code>[1] &quot;iki&quot;     &quot;uc&quot;      &quot;oniki&quot;   &quot;iki&quot;     &quot;yirmi&quot;   &quot;otuziki&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
-<div id="apply-uygulamasi" class="section level2">
-<h2>Apply Uygulamasi</h2>
+<div id="vektorel-islemler" class="section level1">
+<h1>3. Vektorel Islemler</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXBwbHkoQSwgMSxtZWFuKVxuYGBgIn0= -->
-<pre class="r"><code>apply(A, 1,mean)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2lya2V0X2EgPC0gYyhcIlJcIixcInNxbFwiLFwiUHl0aG9uXCIsXCJTUFNTXCIsXCJTQVNcIilcbnNpcmtldF9iIDwtIGMoXCJzcWxcIixcIlJcIixcIlB5dGhvblwiLFwiU1BTU1wiLFwiRXhjZWxcIilcbnNpcmtldF9jIDwtIGMoXCJSXCIsXCJzcWxcIixcIlB5dGhvblwiLFwiU0FTXCIsXCJTUFNTXCIpXG51bmlvbihzaXJrZXRfYixzaXJrZXRfYSlcbmBgYCJ9 -->
+<pre class="r"><code>sirket_a &lt;- c(&quot;R&quot;,&quot;sql&quot;,&quot;Python&quot;,&quot;SPSS&quot;,&quot;SAS&quot;)
+sirket_b &lt;- c(&quot;sql&quot;,&quot;R&quot;,&quot;Python&quot;,&quot;SPSS&quot;,&quot;Excel&quot;)
+sirket_c &lt;- c(&quot;R&quot;,&quot;sql&quot;,&quot;Python&quot;,&quot;SAS&quot;,&quot;SPSS&quot;)
+union(sirket_b,sirket_a)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDQgNSA2XG4ifQ== -->
-<pre><code>[1] 4 5 6</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwic3FsXCIgICAgXCJSXCIgICAgICBcIlB5dGhvblwiIFwiU1BTU1wiICAgXCJFeGNlbFwiICBcIlNBU1wiICAgXG4ifQ== -->
+<pre><code>[1] &quot;sql&quot;    &quot;R&quot;      &quot;Python&quot; &quot;SPSS&quot;   &quot;Excel&quot;  &quot;SAS&quot;   </code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXBwbHkoQSwgMixtZWFuKVxuYGBgIn0= -->
-<pre class="r"><code>apply(A, 2,mean)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW50ZXJzZWN0KHNpcmtldF9hLHNpcmtldF9iKVxuYGBgIn0= -->
+<pre class="r"><code>intersect(sirket_a,sirket_b)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDIgNSA4XG4ifQ== -->
-<pre><code>[1] 2 5 8</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiUlwiICAgICAgXCJzcWxcIiAgICBcIlB5dGhvblwiIFwiU1BTU1wiICBcbiJ9 -->
+<pre><code>[1] &quot;R&quot;      &quot;sql&quot;    &quot;Python&quot; &quot;SPSS&quot;  </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2V0ZGlmZihzaXJrZXRfYSxzaXJrZXRfYilcbmBgYCJ9 -->
+<pre class="r"><code>setdiff(sirket_a,sirket_b)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiU0FTXCJcbiJ9 -->
+<pre><code>[1] &quot;SAS&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2V0ZGlmZihzaXJrZXRfYyxzaXJrZXRfYSlcbmBgYCJ9 -->
+<pre class="r"><code>setdiff(sirket_c,sirket_a)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiY2hhcmFjdGVyKDApXG4ifQ== -->
+<pre><code>character(0)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2V0ZXF1YWwoc2lya2V0X2Esc2lya2V0X2MpXG5gYGAifQ== -->
+<pre class="r"><code>setequal(sirket_a,sirket_c)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
+<pre><code>[1] TRUE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaWRlbnRpY2FsKHNpcmtldF9hLHNpcmtldF9jKVxuYGBgIn0= -->
+<pre class="r"><code>identical(sirket_a,sirket_c)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIEZBTFNFXG4ifQ== -->
+<pre><code>[1] FALSE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaWRlbnRpY2FsKHNpcmtldF9hLHNpcmtldF9hKVxuYGBgIn0= -->
+<pre class="r"><code>identical(sirket_a,sirket_a)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
+<pre><code>[1] TRUE</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
-<div id="lineer-cebir-islemleri" class="section level2">
-<h2>Lineer Cebir Islemleri</h2>
+<div id="string-ile-karakter-islemleri" class="section level1">
+<h1>4. String ile karakter Islemleri</h1>
+<div id="str_detect-eslesme-saptama-islemleri" class="section level2">
+<h2>str_detect(): eslesme saptama islemleri</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQTwtbWF0cml4KDE6OSwzLDMpXG5kaWFnKEEpIyBLb3NlZ2VuIEVsZW1hbmxhcmlcbmBgYCJ9 -->
-<pre class="r"><code>A&lt;-matrix(1:9,3,3)
-diag(A)# Kosegen Elemanlari</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShzdHJpbmdyKVxudjwtIGMoXCJiaXJcIiwgXCJiZXJiZXJcIixcImJpcmJpclwiLFwiYmVyYmVyZVwiLFwiZ2VsbWVcIixcImJ1cmFzaVwiLFwiYmFuYSBhbmNhIHlldGVyXCIpXG5zdHJfZGV0ZWN0KHYsXCJiaXJcIilcbmBgYCJ9 -->
+<pre class="r"><code>library(stringr)
+v&lt;- c(&quot;bir&quot;, &quot;berber&quot;,&quot;birbir&quot;,&quot;berbere&quot;,&quot;gelme&quot;,&quot;burasi&quot;,&quot;bana anca yeter&quot;)
+str_detect(v,&quot;bir&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEgNSA5XG4ifQ== -->
-<pre><code>[1] 1 5 9</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdICBUUlVFIEZBTFNFICBUUlVFIEZBTFNFIEZBTFNFIEZBTFNFIEZBTFNFXG4ifQ== -->
+<pre><code>[1]  TRUE FALSE  TRUE FALSE FALSE FALSE FALSE</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtKGRpYWcoQSkpICMgSXpcbmBgYCJ9 -->
-<pre class="r"><code>sum(diag(A)) # Iz</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX3doaWNoKHYsXCJiaXJcIilcbmBgYCJ9 -->
+<pre class="r"><code>str_which(v,&quot;bir&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDE1XG4ifQ== -->
-<pre><code>[1] 15</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEgM1xuIn0= -->
+<pre><code>[1] 1 3</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSSA8LSBkaWFnKGMoMSwxLDEpKSAjIEJpcmltIE1hdHJpeFxubWF0cml4KGMoMiwxLDMsMSwyLDEsMywxLDIpLDMsMykgIyBTaW1ldHJpayBNYXRyaXhcbmBgYCJ9 -->
-<pre class="r"><code>I &lt;- diag(c(1,1,1)) # Birim Matrix
-matrix(c(2,1,3,1,2,1,3,1,2),3,3) # Simetrik Matrix</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX2NvdW50KHYsXCJiaXJcIilcbmBgYCJ9 -->
+<pre class="r"><code>str_count(v,&quot;bir&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXVxuWzEsXSAgICAyICAgIDEgICAgM1xuWzIsXSAgICAxICAgIDIgICAgMVxuWzMsXSAgICAzICAgIDEgICAgMlxuIn0= -->
-<pre><code>     [,1] [,2] [,3]
-[1,]    2    1    3
-[2,]    1    2    1
-[3,]    3    1    2</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEgMCAyIDAgMCAwIDBcbiJ9 -->
+<pre><code>[1] 1 0 2 0 0 0 0</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudChBKSAjIFRyYXNucG96XG5gYGAifQ== -->
-<pre class="r"><code>t(A) # Trasnpoz</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX2xvY2F0ZSh2LFwiYmlyXCIpXG5gYGAifQ== -->
+<pre class="r"><code>str_locate(v,&quot;bir&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXVxuWzEsXSAgICAxICAgIDIgICAgM1xuWzIsXSAgICA0ICAgIDUgICAgNlxuWzMsXSAgICA3ICAgIDggICAgOVxuIn0= -->
-<pre><code>     [,1] [,2] [,3]
-[1,]    1    2    3
-[2,]    4    5    6
-[3,]    7    8    9</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICBzdGFydCBlbmRcblsxLF0gICAgIDEgICAzXG5bMixdICAgIE5BICBOQVxuWzMsXSAgICAgMSAgIDNcbls0LF0gICAgTkEgIE5BXG5bNSxdICAgIE5BICBOQVxuWzYsXSAgICBOQSAgTkFcbls3LF0gICAgTkEgIE5BXG4ifQ== -->
+<pre><code>     start end
+[1,]     1   3
+[2,]    NA  NA
+[3,]     1   3
+[4,]    NA  NA
+[5,]    NA  NA
+[6,]    NA  NA
+[7,]    NA  NA</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGV0KEEpICMgRGV0ZXJtaW5hbnRcbmBgYCJ9 -->
-<pre class="r"><code>det(A) # Determinant</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX2xvY2F0ZV9hbGwodixcImJpclwiKVxuYGBgIn0= -->
+<pre class="r"><code>str_locate_all(v,&quot;bir&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDBcbiJ9 -->
-<pre><code>[1] 0</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQTwtbWF0cml4KDE6OSwzLDMpXG5CPC1tYXRyaXgoMTo5LDMsMylcbkEgJSolIEIgIyBNYXRyaXMgQ2FycGltXG5gYGAifQ== -->
-<pre class="r"><code>A&lt;-matrix(1:9,3,3)
-B&lt;-matrix(1:9,3,3)
-A %*% B # Matris Carpim</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXVxuWzEsXSAgIDMwICAgNjYgIDEwMlxuWzIsXSAgIDM2ICAgODEgIDEyNlxuWzMsXSAgIDQyICAgOTYgIDE1MFxuIn0= -->
-<pre><code>     [,1] [,2] [,3]
-[1,]   30   66  102
-[2,]   36   81  126
-[3,]   42   96  150</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc29sdmUobWF0cml4KGMoMyw0LDUsOCksMiwyKSkgIyBNYXRyaXNpbiB0ZXJzaVxuYGBgIn0= -->
-<pre class="r"><code>solve(matrix(c(3,4,5,8),2,2)) # Matrisin tersi</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdICBbLDJdXG5bMSxdICAgIDIgLTEuMjVcblsyLF0gICAtMSAgMC43NVxuIn0= -->
-<pre><code>     [,1]  [,2]
-[1,]    2 -1.25
-[2,]   -1  0.75</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-</div>
-<div id="matris-formunda-regresyon-uygulamasi" class="section level1">
-<h1>5. Matris Formunda Regresyon Uygulamasi</h1>
-<p>y = a0 + a1X1 + ….. + anXn</p>
-<p>a = [X’X]^-1 X’y</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkcilcbmhzYiA8LSByZWFkX3RhYmxlMihcImhzYi50eHRcIilcbmBgYCJ9 -->
-<pre class="r"><code>library(readr)
-hsb &lt;- read_table2(&quot;hsb.txt&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTWlzc2luZyBjb2x1bW4gbmFtZXMgZmlsbGVkIGluOiAnWDExJyBbMTFdXG5cdTAwMWJbMzZtLS1cdTAwMWJbMzltIFx1MDAxYlsxbVx1MDAxYlsxbUNvbHVtbiBzcGVjaWZpY2F0aW9uXHUwMDFiWzFtXHUwMDFiWzIybSBcdTAwMWJbMzZtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXHUwMDFiWzM5bVxuY29scyhcbiAgZmVtYWxlID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHJhY2UgPSBcdTAwMWJbMzJtY29sX2RvdWJsZSgpXHUwMDFiWzM5bSxcbiAgc2VzID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHNjaHR5cCA9IFx1MDAxYlszMm1jb2xfZG91YmxlKClcdTAwMWJbMzltLFxuICBwcm9nID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHJlYWQgPSBcdTAwMWJbMzJtY29sX2RvdWJsZSgpXHUwMDFiWzM5bSxcbiAgd3JpdGUgPSBcdTAwMWJbMzJtY29sX2RvdWJsZSgpXHUwMDFiWzM5bSxcbiAgbWF0aCA9IFx1MDAxYlszMm1jb2xfZG91YmxlKClcdTAwMWJbMzltLFxuICBzY2llbmNlID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHNvY3N0ID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIFgxMSA9IFx1MDAxYlszMm1jb2xfZG91YmxlKClcdTAwMWJbMzltXG4pXG5cbjIwMCBwYXJzaW5nIGZhaWx1cmVzLlxucm93IGNvbCAgIGV4cGVjdGVkICAgICBhY3R1YWwgICAgICBmaWxlXG4gIDEgIC0tIDExIGNvbHVtbnMgMTIgY29sdW1ucyAnaHNiLnR4dCdcbiAgMiAgLS0gMTEgY29sdW1ucyAxMiBjb2x1bW5zICdoc2IudHh0J1xuICAzICAtLSAxMSBjb2x1bW5zIDEyIGNvbHVtbnMgJ2hzYi50eHQnXG4gIDQgIC0tIDExIGNvbHVtbnMgMTIgY29sdW1ucyAnaHNiLnR4dCdcbiAgNSAgLS0gMTEgY29sdW1ucyAxMiBjb2x1bW5zICdoc2IudHh0J1xuLi4uIC4uLiAuLi4uLi4uLi4uIC4uLi4uLi4uLi4gLi4uLi4uLi4uXG5TZWUgcHJvYmxlbXMoLi4uKSBmb3IgbW9yZSBkZXRhaWxzLlxuIn0= -->
-<pre><code>Missing column names filled in: 'X11' [11]
-[36m--[39m [1m[1mColumn specification[1m[22m [36m------------------------------------[39m
-cols(
-  female = [32mcol_double()[39m,
-  race = [32mcol_double()[39m,
-  ses = [32mcol_double()[39m,
-  schtyp = [32mcol_double()[39m,
-  prog = [32mcol_double()[39m,
-  read = [32mcol_double()[39m,
-  write = [32mcol_double()[39m,
-  math = [32mcol_double()[39m,
-  science = [32mcol_double()[39m,
-  socst = [32mcol_double()[39m,
-  X11 = [32mcol_double()[39m
-)
+<!-- rnb-output-begin eyJkYXRhIjoiW1sxXV1cbiAgICAgc3RhcnQgZW5kXG5bMSxdICAgICAxICAgM1xuXG5bWzJdXVxuICAgICBzdGFydCBlbmRcblxuW1szXV1cbiAgICAgc3RhcnQgZW5kXG5bMSxdICAgICAxICAgM1xuWzIsXSAgICAgNCAgIDZcblxuW1s0XV1cbiAgICAgc3RhcnQgZW5kXG5cbltbNV1dXG4gICAgIHN0YXJ0IGVuZFxuXG5bWzZdXVxuICAgICBzdGFydCBlbmRcblxuW1s3XV1cbiAgICAgc3RhcnQgZW5kXG4ifQ== -->
+<pre><code>[[1]]
+     start end
+[1,]     1   3
 
-200 parsing failures.
-row col   expected     actual      file
-  1  -- 11 columns 12 columns 'hsb.txt'
-  2  -- 11 columns 12 columns 'hsb.txt'
-  3  -- 11 columns 12 columns 'hsb.txt'
-  4  -- 11 columns 12 columns 'hsb.txt'
-  5  -- 11 columns 12 columns 'hsb.txt'
-... ... .......... .......... .........
-See problems(...) for more details.</code></pre>
+[[2]]
+     start end
+
+[[3]]
+     start end
+[1,]     1   3
+[2,]     4   6
+
+[[4]]
+     start end
+
+[[5]]
+     start end
+
+[[6]]
+     start end
+
+[[7]]
+     start end</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaHNiPC1uYS5vbWl0KGhzYilcbnkgPC0gbWF0cml4KGhzYiR3cml0ZSxuY29sPTEpXG4jIHlcbng8LSBhcy5tYXRyaXgoY2JpbmQoMSxoc2IkbWF0aCxoc2Ikc2NpZW5jZSxoc2Ikc29jc3QsaHNiJGZlbWFsZSkpXG5uPC1ucm93KHgpXG5wPC1uY29sKHgpXG5zb2x2ZSh0KHgpJSoleCklKiV0KHgpJSoleVxuYGBgIn0= -->
-<pre class="r"><code>hsb&lt;-na.omit(hsb)
-y &lt;- matrix(hsb$write,ncol=1)
-# y
-x&lt;- as.matrix(cbind(1,hsb$math,hsb$science,hsb$socst,hsb$female))
-n&lt;-nrow(x)
-p&lt;-ncol(x)
-solve(t(x)%*%x)%*%t(x)%*%y</code></pre>
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="str_sub-karakter-alt-kume" class="section level2">
+<h2>str_sub(): karakter alt kume</h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX3N1Yih2LDEsMylcbmBgYCJ9 -->
+<pre class="r"><code>str_sub(v,1,3)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgWywxXVxuWzEsXSAgNC4zNzAwNDU3MFxuWzIsXSAgMC4yMzcxOTA1MlxuWzMsXSAgMC4zODA2MzA3N1xuWzQsXSAgMC4zMTgyODE5MFxuWzUsXSAtMC4wMTE5MzAzNFxuIn0= -->
-<pre><code>            [,1]
-[1,]  4.37004570
-[2,]  0.23719052
-[3,]  0.38063077
-[4,]  0.31828190
-[5,] -0.01193034</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiYmlyXCIgXCJiZXJcIiBcImJpclwiIFwiYmVyXCIgXCJnZWxcIiBcImJ1clwiIFwiYmFuXCJcbiJ9 -->
+<pre><code>[1] &quot;bir&quot; &quot;ber&quot; &quot;bir&quot; &quot;ber&quot; &quot;gel&quot; &quot;bur&quot; &quot;ban&quot;</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBzdW1tYXJ5KGxtKHdyaXRlfm1hdGgrc2NpZW5jZStzb2NzdCtmZW1hbGUraHNiKSlcbmBgYCJ9 -->
-<pre class="r"><code># summary(lm(write~math+science+socst+female+hsb))</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmlyc2V5bGVyIDwtIGMoXCJidXl1a3ZlcmlcIixcIm1ha2luZW9ncmVubWVzaXZldmVyaVwiLFwiaXN0YXRpc3Rpa3ZldmVyaVwiLFwiYm9yY2FtdmVyaVwiKVxuc3RyX3N1YihiaXJzZXlsZXIsLTQsLTEpXG5gYGAifQ== -->
+<pre class="r"><code>birseyler &lt;- c(&quot;buyukveri&quot;,&quot;makineogrenmesiveveri&quot;,&quot;istatistikveveri&quot;,&quot;borcamveri&quot;)
+str_sub(birseyler,-4,-1)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwidmVyaVwiIFwidmVyaVwiIFwidmVyaVwiIFwidmVyaVwiXG4ifQ== -->
+<pre><code>[1] &quot;veri&quot; &quot;veri&quot; &quot;veri&quot; &quot;veri&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3Vic3RyaW5nKGJpcnNleWxlciwtNCwtMSlcbmBgYCJ9 -->
+<pre class="r"><code>substring(birseyler,-4,-1)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiXCIgXCJcIiBcIlwiIFwiXCJcbiJ9 -->
+<pre><code>[1] &quot;&quot; &quot;&quot; &quot;&quot; &quot;&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="str_length-karakter-uzunluk" class="section level2">
+<h2>str_length(): karakter uzunluk</h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmNoYXIodilcbmBgYCJ9 -->
+<pre class="r"><code>nchar(v)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdICAzICA2ICA2ICA3ICA1ICA2IDE1XG4ifQ== -->
+<pre><code>[1]  3  6  6  7  5  6 15</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX2xlbmd0aCh2KVxuYGBgIn0= -->
+<pre class="r"><code>str_length(v)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdICAzICA2ICA2ICA3ICA1ICA2IDE1XG4ifQ== -->
+<pre><code>[1]  3  6  6  7  5  6 15</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYV9iIDwtIGZhY3RvcihjKDEsMSwxLDAsMCwwKSxsYWJlbHMgPSBjKFwiYmlyXCIsXCJpa2lcIikpXG5hX2JcbmBgYCJ9 -->
+<pre class="r"><code>a_b &lt;- factor(c(1,1,1,0,0,0),labels = c(&quot;bir&quot;,&quot;iki&quot;))
+a_b</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIGlraSBpa2kgaWtpIGJpciBiaXIgYmlyXG5MZXZlbHM6IGJpciBpa2lcbiJ9 -->
+<pre><code>[1] iki iki iki bir bir bir
+Levels: bir iki</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBuY2hhcihhX2IpICMjIEhhdGEgdmVyaXJcbnN0cl9sZW5ndGgoYV9iKVxuYGBgIn0= -->
+<pre class="r"><code># nchar(a_b) ## Hata verir
+str_length(a_b)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDMgMyAzIDMgMyAzXG4ifQ== -->
+<pre><code>[1] 3 3 3 3 3 3</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="str_replace-eslesme-degistirme" class="section level2">
+<h2>str_replace(): eslesme degistirme</h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX3N1Yih2LDEsMylcbmBgYCJ9 -->
+<pre class="r"><code>str_sub(v,1,3)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiYmlyXCIgXCJiZXJcIiBcImJpclwiIFwiYmVyXCIgXCJnZWxcIiBcImJ1clwiIFwiYmFuXCJcbiJ9 -->
+<pre><code>[1] &quot;bir&quot; &quot;ber&quot; &quot;bir&quot; &quot;ber&quot; &quot;gel&quot; &quot;bur&quot; &quot;ban&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX3JlcGxhY2UodixcImJpclwiLFwiLS1cIilcbmBgYCJ9 -->
+<pre class="r"><code>str_replace(v,&quot;bir&quot;,&quot;--&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiLS1cIiAgICAgICAgICAgICAgXCJiZXJiZXJcIiAgICAgICAgICBcIi0tYmlyXCIgICAgICAgICAgIFwiYmVyYmVyZVwiICAgICAgICBcbls1XSBcImdlbG1lXCIgICAgICAgICAgIFwiYnVyYXNpXCIgICAgICAgICAgXCJiYW5hIGFuY2EgeWV0ZXJcIlxuIn0= -->
+<pre><code>[1] &quot;--&quot;              &quot;berber&quot;          &quot;--bir&quot;           &quot;berbere&quot;        
+[5] &quot;gelme&quot;           &quot;burasi&quot;          &quot;bana anca yeter&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX3JlcGxhY2VfYWxsKHYsXCJiaXJcIixcIi0tXCIpXG5gYGAifQ== -->
+<pre class="r"><code>str_replace_all(v,&quot;bir&quot;,&quot;--&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiLS1cIiAgICAgICAgICAgICAgXCJiZXJiZXJcIiAgICAgICAgICBcIi0tLS1cIiAgICAgICAgICAgIFwiYmVyYmVyZVwiICAgICAgICBcbls1XSBcImdlbG1lXCIgICAgICAgICAgIFwiYnVyYXNpXCIgICAgICAgICAgXCJiYW5hIGFuY2EgeWV0ZXJcIlxuIn0= -->
+<pre><code>[1] &quot;--&quot;              &quot;berber&quot;          &quot;----&quot;            &quot;berbere&quot;        
+[5] &quot;gelme&quot;           &quot;burasi&quot;          &quot;bana anca yeter&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBzdHJfdG9fbG93ZXIoKVxuIyBzdHJfdG9fdXBwZXIoKVxuYGBgIn0= -->
+<pre class="r"><code># str_to_lower()
+# str_to_upper()</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+</div>
+<div id="str_c-karakter-birlestirme" class="section level2">
+<h2>str_c(): karakter birlestirme</h2>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX2MoXCJhbGlcIixcImF0YVwiLFwiYmFrbWF5aVwiLFwiYmlyYWtcIixcIm1pbGxldFwiLFwidXpheWFcIixcImdpZGl5b3JcIixzZXAgPSBcIi1cIilcbmBgYCJ9 -->
+<pre class="r"><code>str_c(&quot;ali&quot;,&quot;ata&quot;,&quot;bakmayi&quot;,&quot;birak&quot;,&quot;millet&quot;,&quot;uzaya&quot;,&quot;gidiyor&quot;,sep = &quot;-&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiYWxpLWF0YS1iYWttYXlpLWJpcmFrLW1pbGxldC11emF5YS1naWRpeW9yXCJcbiJ9 -->
+<pre><code>[1] &quot;ali-ata-bakmayi-birak-millet-uzaya-gidiyor&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+</div>
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIk1hdHJpcyINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KLS0tDQoNCiMgMS4gTWF0cmlzIG5lZGlyPw0KDQpNYXRyaXNsZXIsIGJpciB2ZXlhIGJpcmRlbiBmYXpsYSBzYXRpciB2ZSBzdXR1bmRhbiBvbHVzYW4gZGl6aWxlcmRpci4NCg0KIyAyLiBNYXRyaXMgQmljaW1sZW5kaXJtZQ0KDQojIyBNYXRyaXMgT2x1c3R1cm1hDQoNCmBgYHtyfQ0KdjE8LSBjKDEsMiwzLDQsNSkNCnYyPC0gYygyLDMsNCw1LDYpDQp2MzwtIGMoMyw0LDUsNiw3KQ0KdjQ8LSBjKDQsNSw2LDcsOCkNCg0KdjwtY2JpbmQodjEsdjIsdjMsdjQpDQoNCm1hdHJpeCgxOjksbnJvdyA9IDMsbmNvbCA9IDMsYnlyb3cgPSBUUlVFKQ0KDQptYXRyaXgoYygxLDIsMywxMSwyMiwzMyksMiwzKQ0KDQptYXRyaXgoYygxLDIsMywxMSwyMiwzMyksMikNCmBgYA0KDQojIyBNYXRyaXMgQm95dXRsYXJpIHZlIEZyZWthbnMgVGFibG9zdQ0KYGBge3J9DQptPC1tYXRyaXgoYygxLDIsMywxMSwyMiwzMywxMTEsMjIyLDMzMyksMywzKQ0KZGltKG0pDQp4PC1tYXRyaXgocmVwKDE6MywzKSwzLDMpDQp0YWJsZShtKQ0KYGBgDQoNCiMjIE1hdHJpcyBCaXJsZXN0aXJtZQ0KYGBge3J9DQpNQTwtcm5vcm0oMTYpDQpNQTwtbWF0cml4KE1BLDQsNCkNCg0KTUI8LXJub3JtKDE2LDkwLDEwKQ0KTUI8LW1hdHJpeChNQiw0LDQpDQoNCnJiaW5kKE1BLE1CKQ0KY2JpbmQoTUEsTUIpDQoNCk1BWzE6MiwxOjJdDQpNQlszOjQsMzo0XQ0KDQpjYmluZChNQVsxOjIsMToyXSxNQlszOjQsMzo0XSkNCmBgYA0KDQojIyBNYXRyaXMgSXNpbWxlbmRpcm1lDQpgYGB7cn0NCnYxPC0gYygxLDIsMyw0LDUpDQp2MjwtIGMoMiwzLDQsNSw2KQ0KdjM8LSBjKDMsNCw1LDYsNykNCnY0PC0gYyg0LDUsNiw3LDgpDQoNCnY8LWNiaW5kKHYxLHYyLHYzLHY0KQ0KY29sbmFtZXModikgPC0gYygiYmlyIiwiaWtpIiwidWMiLCJkb3J0IikNCnJvd25hbWVzKHYpIDwtIGMoImJpciIsImlraSIsInVjIiwiZG9ydCIsImJlcyIpDQoNCmRldl9tIDwtIG1hdHJpeCgxOjEwMDAwLG5jb2wgPSA1LG5yb3c9NTAwKQ0KDQpyb3duYW1lcyhkZXZfbSk8LWMocGFzdGUoIm11c3RlcmlfaWQiLDE6NTAwLHNlcCA9Il8iKSkNCmBgYA0KDQojIDMuIE1hdHJpcyBFbGVtYW4gSXNsZW1sZXJpDQoNCiMjIE1hdHJpcyBJbmRla3NpIHZlIEVsZW1hbiBTZWNpbWkNCmBgYHtyfQ0KTTwtbWF0cml4KGMoMSwyLDExLDIyLDExMSwyMjIsMTExMSwyMjIyKSxucm93PTQsbmNvbCA9IDIsYnlyb3cgPSBUUlVFKQ0KDQpjb2xuYW1lcyhNKSA8LSBjKCJiaXIiLCJpa2kiKQ0Kcm93bmFtZXMoTSkgPC0gYygicmFrYW0iLCJvbmxhciIsInl1emxlIiwiYmlubGVyIikNCg0KIyBFbGVtYW4gU2VjbWUNCg0KTVsxLDFdDQpNWzMsMV0NCk1bMiwyXQ0KDQojIFNhdGlyIFNlY21lDQpNWzEsXQ0KTVsxOjIsXQ0KTVtjKDEsNCksXQ0KDQojIFN1dHVuIFNlY21lDQpNWywxXQ0KTVssMToyXQ0KDQptPC1tYXRyaXgocm5vcm0oMjUpLDEwLDEwKQ0KbVsxOjUsNTo3XQ0KDQpjb2xuYW1lcyhtKSA8LSBjKHBhc3RlKCJzdXR1biIsMToxMCxzZXAgPSAiLSIpKQ0Kcm93bmFtZXMobSkgPC0gYyhwYXN0ZSgic2F0aXIiLDE6MTAsc2VwID0gIi0iKSkNCm0NCm1bLCJzdXR1bi0yIl0NCm1bInNhdGlyLTIiLF0NCg0KbTwtbWF0cml4KDE6MTAwMCw1MCwxMCkNCmRpbShtKQ0KY29sbmFtZXMobSkgPC0gYyhwYXN0ZSgiZGVnaXNrZW4iLDE6MTAsc2VwID0gIl8iKSkNCg0KbVssImRlZ2lza2VuXzEiXQ0KbWVhbihtWywiZGVnaXNrZW5fMSJdKQ0KYXMuY2hhcmFjdGVyKHJvdW5kKHNxcnQobWVhbihtWywiZGVnaXNrZW5fMSJdKSkpKQ0KY29sbmFtZXMobSlbMV08LWFzLmNoYXJhY3RlcihzcXJ0KHJvdW5kKHNxcnQobWVhbihtWywiZGVnaXNrZW5fMSJdKSkpKSkNCmNvbG5hbWVzKG0pPC1hcy5jaGFyYWN0ZXIocm91bmQoc3FydChhcHBseShtLDIsbWVhbikpKSkNCmBgYA0KDQojIyBLb3N1bGx1IEVsZW1hbiBTZWNpbWkNCmBgYHtyfQ0KbTwtIG1hdHJpeCgxOjI1LDUsNSkNCm0NCm1bLDFdID4gMg0KbVttWywxXSA+IDIsXQ0KbVttWywxXSA+IDIsMV0NCiMjIyMNCm1lYW4obVssMV0pDQptW21bLDFdPm1lYW4obVssMV0pLDFdDQojIyMjDQptZWFuKG1bLDRdKQ0KbVttWywyXTxtZWFuKG1bLDRdKSwyXQ0KYGBgDQoNCiMgNC4gTWF0cmlzIEhlc2FwbGFtYQ0KDQojIyBNYXRlbWF0aWtzZWwgSXNsZW1sZXINCmBgYHtyfQ0KQTwtbWF0cml4KDE6OSwzLDMpDQpBDQpCPC1tYXRyaXgoMTo5LDMsMykNCkErQg0KQS1CDQpBL0INCkEqQg0KQSo4DQpBWzEsMl0rQlszLDNdIC0gMTANCnN1bShBKQ0KbWVhbihBKQ0Kcm93U3VtcyhBKQ0KY29sU3VtcyhBKQ0Kcm93TWVhbnMoQSkNCg0KYGBgDQoNCiMjIEFwcGx5IFV5Z3VsYW1hc2kNCmBgYHtyfQ0KYXBwbHkoQSwgMSxtZWFuKQ0KYXBwbHkoQSwgMixtZWFuKQ0KYGBgDQoNCiMjIExpbmVlciBDZWJpciBJc2xlbWxlcmkNCmBgYHtyfQ0KDQpBPC1tYXRyaXgoMTo5LDMsMykNCmRpYWcoQSkjIEtvc2VnZW4gRWxlbWFubGFyaQ0Kc3VtKGRpYWcoQSkpICMgSXoNCkkgPC0gZGlhZyhjKDEsMSwxKSkgIyBCaXJpbSBNYXRyaXgNCm1hdHJpeChjKDIsMSwzLDEsMiwxLDMsMSwyKSwzLDMpICMgU2ltZXRyaWsgTWF0cml4DQp0KEEpICMgVHJhc25wb3oNCmRldChBKSAjIERldGVybWluYW50DQoNCkE8LW1hdHJpeCgxOjksMywzKQ0KQjwtbWF0cml4KDE6OSwzLDMpDQpBICUqJSBCICMgTWF0cmlzIENhcnBpbQ0Kc29sdmUobWF0cml4KGMoMyw0LDUsOCksMiwyKSkgIyBNYXRyaXNpbiB0ZXJzaQ0KYGBgDQoNCiMgNS4gTWF0cmlzIEZvcm11bmRhIFJlZ3Jlc3lvbiBVeWd1bGFtYXNpDQoNCnkgPSBhMCArIGExWDEgKyAuLi4uLiArIGFuWG4NCg0KYSA9IFtYJ1hdXi0xIFgneQ0KDQpgYGB7cn0NCmxpYnJhcnkocmVhZHIpDQpoc2IgPC0gcmVhZF90YWJsZTIoImhzYi50eHQiKQ0KaHNiPC1uYS5vbWl0KGhzYikNCnkgPC0gbWF0cml4KGhzYiR3cml0ZSxuY29sPTEpDQojIHkNCng8LSBhcy5tYXRyaXgoY2JpbmQoMSxoc2IkbWF0aCxoc2Ikc2NpZW5jZSxoc2Ikc29jc3QsaHNiJGZlbWFsZSkpDQoNCm48LW5yb3coeCkNCnA8LW5jb2woeCkNCg0Kc29sdmUodCh4KSUqJXgpJSoldCh4KSUqJXkNCg0KIyBzdW1tYXJ5KGxtKHdyaXRlfm1hdGgrc2NpZW5jZStzb2NzdCtmZW1hbGUraHNiKSkNCmBgYA0KDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlInZGEgS2FyYWt0ZXIgaWxlIENhbGlzbWFrIg0Kb3V0cHV0OiBodG1sX25vdGVib29rDQotLS0NCg0KIyAxLiBLYXJha3RlciBPbHVzdHVybWFrDQoNCiMjIEJvcyBLYXJha3Rlcg0KDQpgYGB7cn0NCmJvc19zdHJpbmcgPC0gIiINCmNsYXNzKGJvc19zdHJpbmcpDQoNCm9ybmVrIDwtIGNoYXJhY3RlcigwKQ0Kc3RyKG9ybmVrKQ0Kb3JuZWtbMV0NCm9ybmVrWzFdIDwtICJCdSBCaXJpbmNpIERlZ2VyZGlyIg0Kb3JuZWsNCm9ybmVrWzJdIDwtICJJa2luY2kgRGVnZXIiDQpvcm5law0KaXMuY2hhcmFjdGVyKG9ybmVrKQ0KDQphcy5jaGFyYWN0ZXIoOSkNCmBgYA0KDQojIyBwYXN0ZSgpIHZlIGRpZ2VybGVyaQ0KDQpgYGB7cn0NCm1ldGluIDwtICJCdSBiaXIgS2FyYWt0ZXJkaXIiDQprYXJha3RlciA8LSAiQnUgZGEgS2FyYWt0ZXJkaXIiDQpjKCJLYXJha3RlciIpDQoNCnBhc3RlKG1ldGluKQ0KcGFzdGUoIkJ1IGJpciBLYXJha3RlcmRpciIpDQpwYXN0ZSgiOTk5OSIpDQpwYXN0ZShtZXRpbixrYXJha3RlcikNCnBhc3RlKDEpDQpwYXN0ZShtZXRpbixrYXJha3RlcixzZXA9Ii0tLS0tLS0iKQ0KDQpwcmludCgiS2FyYWt0ZXIiLHF1b3RlID0gRkFMU0UpDQpub3F1b3RlKCJrYXJha3RlciIpDQoNCmNhdCgiU2VsYW0iKQ0KDQp0b1N0cmluZyg5OSkNCmE8LXRvU3RyaW5nKGMoImFiYyIsOTksVFJVRSxOQSxzdW0oMTo5OSkpKQ0KYQ0KYGBgDQoNCiMgMi4gVGVtZWwgS2FyYWt0ZXIgSXNsZW1sZXJpDQoNCmBgYHtyfQ0KbmNoYXIoIlR1cmhhbiBDYW4gS2FyZ2luIikNCm5jaGFyKGMoImFsaSIsInZlbGkiLCJhaG1ldCIpKQ0KbGVuZ3RoKGMoImFsaSIsInZlbGkiLCJhaG1ldCIpKQ0KbGVuZ3RoKCJUdXJoYW4gQ2FuIEthcmdpbiIpDQoNCnRvbG93ZXIoIkJVIEJ1eXVrIEJpciBDVU1MRSIpDQp0b3VwcGVyKCJidSBrdWN1ayBCaXIgQ1VNbGUiKQ0KdG91cHBlcihjKCJhbGkiLCJ2ZWxpIiwiYWhtZXQiKSkNCg0KY2hhcnRyKCJsIiwiTCIsImxhbGVsaWxlbiBsYWxlIGFsZGltIikNCg0KcmVua2xlcjwtIGNvbG9ycygpWzE6Nl0NCmFiYnJldmlhdGUocmVua2xlcikNCmFiYnJldmlhdGUocmVua2xlcixtaW5sZW5ndGggPSA1KQ0KDQpzdWJzdHIoIlR1cmhhbiIsMiw0KQ0KeDwtYygiYmlyIiwiaWtpIiwidWMiKQ0Kc3Vic3RyKHgsMiwyKSA8LSAiIyINCg0KIyBncmVwKCkNCg0KdjwtYygiYmlyIiwidWMiLCJvbmJpciIsImJpciIsInlpcm1pIiwib3R1emJpciIpDQpncmVwKCJiaXIiLHYpDQoNCiNzdWIoKQ0KDQpzdWIoImJpciIsImlraSIsdikNCmBgYA0KDQojIDMuIFZla3RvcmVsIElzbGVtbGVyDQoNCmBgYHtyfQ0Kc2lya2V0X2EgPC0gYygiUiIsInNxbCIsIlB5dGhvbiIsIlNQU1MiLCJTQVMiKQ0Kc2lya2V0X2IgPC0gYygic3FsIiwiUiIsIlB5dGhvbiIsIlNQU1MiLCJFeGNlbCIpDQpzaXJrZXRfYyA8LSBjKCJSIiwic3FsIiwiUHl0aG9uIiwiU0FTIiwiU1BTUyIpDQoNCnVuaW9uKHNpcmtldF9iLHNpcmtldF9hKQ0KDQppbnRlcnNlY3Qoc2lya2V0X2Esc2lya2V0X2IpDQoNCnNldGRpZmYoc2lya2V0X2Esc2lya2V0X2IpDQpzZXRkaWZmKHNpcmtldF9jLHNpcmtldF9hKQ0KDQpzZXRlcXVhbChzaXJrZXRfYSxzaXJrZXRfYykNCg0KaWRlbnRpY2FsKHNpcmtldF9hLHNpcmtldF9jKQ0KaWRlbnRpY2FsKHNpcmtldF9hLHNpcmtldF9hKQ0KYGBgDQoNCiMgNC4gU3RyaW5nIGlsZSBrYXJha3RlciBJc2xlbWxlcmkNCg0KIyMgc3RyX2RldGVjdCgpOiBlc2xlc21lIHNhcHRhbWEgaXNsZW1sZXJpDQoNCmBgYHtyfQ0KbGlicmFyeShzdHJpbmdyKQ0KdjwtIGMoImJpciIsICJiZXJiZXIiLCJiaXJiaXIiLCJiZXJiZXJlIiwiZ2VsbWUiLCJidXJhc2kiLCJiYW5hIGFuY2EgeWV0ZXIiKQ0Kc3RyX2RldGVjdCh2LCJiaXIiKQ0Kc3RyX3doaWNoKHYsImJpciIpDQpzdHJfY291bnQodiwiYmlyIikNCnN0cl9sb2NhdGUodiwiYmlyIikNCnN0cl9sb2NhdGVfYWxsKHYsImJpciIpDQpgYGANCg0KIyMgc3RyX3N1YigpOiBrYXJha3RlciBhbHQga3VtZQ0KDQpgYGB7cn0NCnN0cl9zdWIodiwxLDMpDQpiaXJzZXlsZXIgPC0gYygiYnV5dWt2ZXJpIiwibWFraW5lb2dyZW5tZXNpdmV2ZXJpIiwiaXN0YXRpc3Rpa3ZldmVyaSIsImJvcmNhbXZlcmkiKQ0Kc3RyX3N1YihiaXJzZXlsZXIsLTQsLTEpDQpzdWJzdHJpbmcoYmlyc2V5bGVyLC00LC0xKQ0KYGBgDQoNCiMjIHN0cl9sZW5ndGgoKToga2FyYWt0ZXIgdXp1bmx1aw0KDQpgYGB7cn0NCm5jaGFyKHYpDQpzdHJfbGVuZ3RoKHYpDQoNCmFfYiA8LSBmYWN0b3IoYygxLDEsMSwwLDAsMCksbGFiZWxzID0gYygiYmlyIiwiaWtpIikpDQphX2INCg0KIyBuY2hhcihhX2IpICMjIEhhdGEgdmVyaXINCnN0cl9sZW5ndGgoYV9iKQ0KYGBgDQoNCiMjIHN0cl9yZXBsYWNlKCk6IGVzbGVzbWUgZGVnaXN0aXJtZQ0KDQpgYGB7cn0NCnN0cl9zdWIodiwxLDMpDQoNCnN0cl9yZXBsYWNlKHYsImJpciIsIi0tIikNCnN0cl9yZXBsYWNlX2FsbCh2LCJiaXIiLCItLSIpDQoNCiMgc3RyX3RvX2xvd2VyKCkNCiMgc3RyX3RvX3VwcGVyKCkNCmBgYA0KDQoNCiMjIHN0cl9jKCk6IGthcmFrdGVyIGJpcmxlc3Rpcm1lDQoNCmBgYHtyfQ0Kc3RyX2MoImFsaSIsImF0YSIsImJha21heWkiLCJiaXJhayIsIm1pbGxldCIsInV6YXlhIiwiZ2lkaXlvciIsc2VwID0gIi0iKQ0KYGBgDQo=</div>
 
 
 
@@ -2474,7 +2264,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("Matris.Rmd");
+  window.initializeSourceEmbed("Metin_Isleme.Rmd");
   window.initializeCodeFolding("show" === "show");
 });
 </script>

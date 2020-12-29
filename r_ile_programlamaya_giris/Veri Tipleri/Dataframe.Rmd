@@ -1,0 +1,175 @@
+---
+title: "Data Frame"
+output: html_notebook
+---
+# 1. Data Frame Nedir?
+
+Data Frameler, tablo halinde verileri R'da saklamak icin kullanilir. Bunlar, R'daki onemli nesne turlerinden biridir ve cesitli istatistiksel modelleme uygulamalarinda kullanilir.
+
+# 2. Data Frame Bicimlendirme
+
+```{r}
+df <- data.frame(
+  magaza_no=c(1:5),
+  semt = c("Mecidiyekoy","Besiktas","Kadikoy","Bagcilar","Gop"),
+  ortalama_kazanc=c(60,50,61,72,89))
+df
+```
+
+```{r}
+str(df)
+print("---------------")
+summary(df)
+print("---------------")
+nrow(df)
+print("---------------")
+ncol(df)
+print("---------------")
+dim(df)
+```
+
+
+## Data Frame Birlestirme
+
+```{r}
+df <- data.frame(
+  magaza_no=c(1:5),
+  semt = c("Mecidiyekoy","Besiktas","Kadikoy","Bagcilar","Gop"),
+  ortalama_kazanc=c(60,50,61,72,89),
+  stringsAsFactors = FALSE)
+
+df2 <- data.frame(
+  magaza_no=c(1:5),
+  gecmis = c(2,4,5,3,6),
+  personel_sayisi=c(20,23,41,12,69))
+
+merge(df,df2)
+merge(df,df2,by="magaza_no") # Belirli sutuna göre birlestirme
+cbind(df,df2)
+# rbind(df,df2) # Hata veiri ayni sutunlari olmasi lazim
+rbind(df,df)
+```
+
+## Yeni Degisken Ekleme / Silme
+
+```{r df_all}
+
+df_all <- merge(df,df2,by="magaza_no")
+
+df_all
+
+df_all$ort_mus <- c(12,23,34,56,67)
+
+df_all$urun_turu <- c("a","b","c","d","e")
+
+df_all$gereksiz <- 3:7
+
+df_all$gereksiz <- NULL
+
+df_all$per_bas_kazan <- df_all$ortalama_kazanc/df_all$personel_sayisi
+```
+
+## Satir Ekleme / Silme
+
+```{r}
+df
+
+rbind(df,c(6,"Beyoglu",99))
+
+df[-6] # Satir silme
+```
+
+## Data Frame Isimlendirme
+
+```{r}
+df
+
+colnames(df) <- c("n","s","k")
+
+rownames(df) <- c("Bir","Iki","Uc","Dort","Bes")
+
+df$s <- tolower(df$s)
+
+df[,c("n","k")]
+
+library(dplyr)
+library(tibble)
+
+df_all<-df_all %>% remove_rownames %>% column_to_rownames(var="semt")
+
+df_all
+```
+
+## Liste ya da Matrisleri Data Frame'e cevirme
+
+```{r}
+m<-matrix(1:9,3,3)
+
+df<- as.data.frame(m)
+
+sayi<- c(1,2,3)
+harf<-c("a","b","c")
+log<-c(TRUE,FALSE,TRUE)
+liste <- list(sayi,harf,log)
+liste
+
+df<- as.data.frame(liste)
+
+df
+```
+
+## Data Frame Degisken Turleri Degistirme
+
+```{r}
+str(df_all)
+
+df_all$urun_turu <- factor(df_all$urun_turu)
+
+df_all$ort_mus <- as.integer(df_all$ort_mus)
+print("--------------------")
+str(df_all)
+
+```
+
+# 3. Data Frame Eleman Islemleri
+
+## Data Frame Degisken Secimi
+```{r}
+library(ggplot2)
+mpg
+summary(mpg)
+str(mpg)
+
+# mpg$manufacturer
+# mpg$model
+
+head(data.frame(mpg$manufacturer,mpg$model))
+degiskenler<- c("model","year","cyl")
+data<-mpg[degiskenler]
+```
+
+## Data Frame Indeksi ve Eleman Secimi
+
+```{r}
+mpg[1:10]
+mpg[1,1]
+mpg[mpg$manufacturer=="audi" & mpg$cyl=="6"& mpg$year>1999, c("model","drv")]
+```
+
+## Data Frame Eleman Degistirme
+
+```{r}
+mpg[1,1] <- "BMW"
+```
+
+## Data Frame Siralama
+
+```{r}
+df_all[order(df_all$ortalama_kazanc)]
+```
+
+# 4. Data Frame Hesaplamalari
+
+```{r}
+df_all$ortalama_kazanc*10
+```
