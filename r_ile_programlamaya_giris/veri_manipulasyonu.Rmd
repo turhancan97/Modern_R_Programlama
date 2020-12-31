@@ -1,0 +1,212 @@
+---
+title: "Veri Manipulasyonu"
+output: html_notebook
+---
+
+select(): degisken secimi
+filter(): gozlem secimi
+mutate(): degisken olusturma
+summarise(): ozet istatistikler
+group_by(): gruplama
+left_join(): birlestirme islemleri
+summarise(): veri ozetleme
+
+# 1. Veri Seti
+
+```{r}
+library(dplyr)
+library(nycflights13)
+
+df <- flights
+df
+```
+
+```{r}
+head(df)
+str(df)
+summary(df)
+dim(df)
+```
+
+```{r}
+df %>% select(dep_delay, day, carrier) %>%
+  filter(dep_delay>10) %>%
+  group_by(carrier) %>%
+  summarise(n=n(),
+            ortalama=mean(dep_delay))
+```
+
+# 2. Degisken Secim Islemleri: 
+
+select()
+
+```{r}
+select(df,carrier,tailnum)
+select(df,1:3)
+select(df,-carrier)
+select(df,-c(tailnum,carrier))
+```
+
+contains()
+
+```{r}
+select(df,contains("time"))
+```
+
+starts_with()
+
+```{r}
+select(df,starts_with("dep"))
+```
+
+ends_with()
+
+```{r}
+select(df,ends_with("delay"))
+```
+
+num_range()
+
+```{r}
+m <- matrix(1:25,5,5)
+
+colnames(m) <- paste("x",1:5,sep = "")
+
+select(as.data.frame(m),num_range("x",1:3))
+```
+
+```{r}
+select(df,carrier,tailnum,contains("time"))
+```
+
+# 3. Gozlem Secme Islemleri 
+
+filter()
+
+```{r}
+filter(df,year==2013 & month == 2)
+filter(df,dep_delay > 1000)
+filter(df, dep_delay > mean(df$dep_delay,na.rm = TRUE))
+filter(df, dep_delay > mean(df$dep_delay,na.rm = TRUE)+sd(df$dep_delay,na.rm = TRUE))
+```
+
+arrange()
+
+```{r}
+a<-select(df,dep_delay,month,day)
+arrange(a,dep_delay,month,day)
+b<-arrange(a,desc(dep_delay,month),day)
+
+filter(b,dep_delay>0)
+```
+
+```{r}
+df %>% filter(month==2,day==18) %>%
+  select(dep_delay,month) %>%
+  arrange(desc(dep_delay),month)
+  
+```
+
+sample_frac()
+
+```{r}
+df %>% sample_frac(0.05)
+```
+
+
+sample_n()
+
+```{r}
+df %>% sample_n(100)
+```
+
+slice()
+
+```{r}
+df %>% slice(199:299)
+```
+
+top_n()
+
+```{r}
+df %>% top_n(10)
+```
+
+# 3. Degisken Donusum Islemleri: 
+
+mutate()
+
+```{r}
+sample <- df %>% sample_n(1000) %>%
+  select(arr_delay,dep_delay,distance,arr_time)
+
+mutate(sample,kazanc = arr_delay - dep_delay,hiz=distance/arr_time * 60,
+       yeni = kazanc / hiz)
+```
+
+rename()
+
+```{r}
+rename(df, varis_gecikmesi = arr_delay, kalkis_gecikmesi = dep_delay)
+```
+
+transmute()
+
+```{r}
+transmute(sample,kazanc = arr_delay - dep_delay,hiz=distance/arr_time * 60,
+       yeni = kazanc / hiz)
+```
+
+# 4. Gruplama: 
+
+group_by()
+
+```{r}
+df %>% group_by(carrier) %>%
+  summarise(ucus_sayisi = n(),ortalama = mean(dep_delay,na.rm = TRUE),
+  medyan = median(dep_delay,na.rm = TRUE),
+  sd = sd(dep_delay,na.rm = TRUE))
+```
+
+# 5. Tidy Data
+
+```{r}
+library(tidyverse)
+table1
+table2
+table3
+table4a
+table4b
+table5
+```
+
+gathering ve spreading
+
+```{r}
+table4a %>% gather(`1999`,`2000`,key = "year",value = "cases")
+```
+
+```{r}
+table4b %>% gather(`1999`,`2000`,key = "year",value = "population")
+```
+
+```{r}
+a <- table4a %>% gather(`1999`,`2000`,key = "year",value = "cases")
+b <- table4b %>% gather(`1999`,`2000`,key = "year",value = "population")
+
+left_join(a,b)
+```
+
+```{r}
+spread(table2,key = "type",value = "count")
+```
+
+seperating and uniting
+
+```{r}
+table3 %>% separate(rate,into = c("cases","population"),sep = "/",convert=TRUE)
+```
+
+```{r}
+table5 %>% unite(new,century,year,sep = "")
+```

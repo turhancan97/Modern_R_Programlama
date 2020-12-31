@@ -1,0 +1,268 @@
+---
+title: "VEri Gorsellestirme"
+output: html_notebook
+---
+
+```{r}
+library(tibble)
+library(dplyr)
+library(ggplot2)
+
+df <- tibble(kullanim=factor(c("hi","hs"),levels=c("hi","hs")),
+              sure=c(100,180))
+
+ggplot(data=df,aes(x=kullanim,y=sure,fill=kullanim)) +
+  geom_bar(colour="black",fill = "orange",stat ="identity") +
+  guides(fill=FALSE) +
+  xlab("Haftaici - Haftasonu") + ylab("Kullanilma Sureleri") +
+  ggtitle("Telefon Kullanim Istatistikleri")
+```
+
+# 1. Tek Degiskenli Gorsellestirme
+
+## 1.1 Kesikli Degisken
+
+Eger kesikli bir desgisken barplot gorsellestirilecek ise iki turlu yapilabilir. Birincisi frekansa gore digeri ise mutlak degerine gore.
+
+```{r}
+df <- tibble(kullanim=c(rep("hi",20),rep("hs",10)))
+
+# frekans gorsellestirme (sutun grafik geom_bar)
+
+ggplot(df,aes(kullanim)) + geom_bar()
+
+df <- tibble(kullanim=factor(c("hi","hs"),levels=c("hi","hs")),
+              sure=c(100,180))
+
+ggplot(df,aes(x=kullanim, y=sure)) + geom_bar(stat = "identity")
+
+```
+
+### Cizgi ve Nokta Grafik
+
+```{r}
+ggplot(df,aes(x=kullanim,y=sure,group=1)) + geom_line()
+ggplot(df,aes(x=kullanim,y=sure,group=1)) + geom_point()
+ggplot(df,aes(x=kullanim,y=sure,group=1)) + geom_line() + geom_point()
+```
+
+```{r}
+ggplot(df,aes(x=kullanim,y=sure,group=1)) + geom_line(colour="red",linetype="dashed",size=1.6) +
+  geom_point(colour="red",size=4,shape=21,fill = "white") +
+  expand_limits(y=0)
+```
+
+## 1.2 Surekli Degisken
+
+```{r}
+df <- tibble(cinsiyet=factor(rep(c("E","K"),each=500)),
+             sure=c(rnorm(500,mean=80),rnorm(500,mean=81)))
+df
+```
+
+### Histogram
+
+```{r}
+ggplot(df,aes(sure)) + geom_histogram(binwidth = .5,colour = "black",fill="orange") +
+  xlab("Sure Dagilimi") + ylab("Frekans") +
+  ggtitle("Histogram")
+
+ggplot(df,aes(sure)) + geom_density(colour = "blue",fill="white") +
+  xlab("Sure Dagilimi") + ylab("Yogunluk") +
+  ggtitle("Histogram")
+
+ggplot(df,aes(sure)) + geom_histogram(aes(y= ..density..),binwidth = .5,colour = "black",fill="orange") + geom_density(alpha=.3,fill="black")
+```
+
+Kirilimlara gore histogram ve yogunluk grafigi
+
+```{r}
+ggplot(df,aes(sure,fill=cinsiyet)) + 
+  geom_histogram(binwidth = .5,alpha=.5,position = "identity")
+
+ggplot(df,aes(sure,fill=cinsiyet)) + 
+  geom_density()
+```
+
+Kirilimlari iki ayri grafikte gostermek icin
+
+```{r}
+ggplot(df,aes(sure)) + geom_histogram(binwidth = .5,colour = "black",fill="orange") +
+  facet_grid(cinsiyet ~ .)
+```
+
+### Box Plot
+
+```{r}
+ggplot(df,aes(x=cinsiyet,y=sure,fill=cinsiyet)) + geom_boxplot() +
+  guides(fill=FALSE) + coord_flip()
+```
+
+### Alan Grafik
+
+```{r}
+ggplot(df,aes(sure)) + geom_area(stat="bin")
+```
+
+### Frekans Grafig
+
+```{r}
+ggplot(df,aes(sure)) + geom_freqpoly()
+```
+
+### Dotpot
+
+```{r}
+ggplot(df,aes(sure)) + geom_dotplot()
+```
+
+# 2. Iki Degiskenli Gorsellestirme
+
+## 2.1 Surekli X, Surekli Y
+
+### Scatterplot
+
+```{r}
+df <- tibble(cinsiyet=factor(rep(c("E","K"),each=500)),
+             m = c(rnorm(500,mean=80),rnorm(500,mean = 82)),
+             w = c(rnorm(500,mean = 82), rnorm(500,mean=81)))
+```
+
+```{r}
+ggplot(df,aes(m,w)) + geom_point() + geom_smooth(method = lm)
+
+ggplot(df,aes(m,w)) + geom_point() + geom_smooth(method = lm,se=FALSE)
+
+ggplot(df,aes(m,w)) + geom_point() + geom_smooth()
+
+ggplot(df,aes(m,w,color=cinsiyet)) + geom_point()
+
+ggplot(df,aes(m,w,color=cinsiyet)) + geom_point() + geom_smooth(method = lm,se=FALSE)
+
+
+```
+
+## 2.2 Kesikli X, Surekli Y
+
+### Sutun Grafik
+
+```{r}
+df <- tibble(kullanim=factor(c("hi","hs"),levels=c("hi","hs")),
+              sure=c(100,180))
+
+ggplot(data=df,aes(x=kullanim,y=sure,fill=kullanim)) +
+  geom_bar(colour="black",fill = "orange",stat ="identity") +
+  guides(fill=FALSE) +
+  xlab("Haftaici - Haftasonu") + ylab("Kullanilma Sureleri") +
+  ggtitle("Telefon Kullanim Istatistikleri")
+```
+
+### boxplot
+
+```{r}
+df <- tibble(cinsiyet=factor(rep(c("E","K"),each=500)),
+             sure=c(rnorm(500,mean=80),rnorm(500,mean=81)))
+
+ggplot(df,aes(x=cinsiyet,y=sure,fill=cinsiyet)) + geom_boxplot() +
+  guides(fill=FALSE)
+
+```
+
+### Dot plot
+
+```{r}
+ggplot(df,aes(x=cinsiyet,y=sure,fill=cinsiyet)) +
+  geom_dotplot(binaxis = "y",stackdir = "center")
+```
+
+### Violin 
+
+```{r}
+ggplot(df,aes(x=cinsiyet,y=sure,fill=cinsiyet)) +
+  geom_violin(scale = "area")
+```
+
+## 2.3 Kesikli X, Kesikli Y
+
+```{r}
+df <- tibble(kullanim = factor(c("hi","hs","hi","hs"),levels=c("hi","hs")),
+             sure = c(100,180,90,200),
+             cinsiyet = factor(c("E","E","K","K")))
+
+ggplot(df,aes(kullanim,cinsiyet)) + geom_count()
+```
+
+# 3. Grafik Bolme
+
+```{r}
+df <- tibble(c=factor(rep(c("E","K"),each=600)),
+             m=c(rnorm(600,mean=80),rnorm(600,mean=82)),
+             w=c(rnorm(600,mean=82),rnorm(600,mean=81)),
+             me=factor(rep(c("A","B","C"),each=400)))
+df
+```
+
+```{r}
+t <- ggplot(df,aes(m,w)) + geom_point()
+t + facet_grid(. ~c)
+t + facet_grid(c ~ .)
+t + facet_grid(me ~ c)
+```
+
+# 4. Zaman Serisi Gorsellestirme
+
+```{r}
+head(economics)
+
+d <- economics
+
+s <- d %>% filter(date > as.Date("2010-1-1"))
+
+ggplot(s, aes(date,pop)) + geom_line()
+
+ggplot(s, aes(date,pop)) + geom_line(aes(size = unemploy/pop))
+```
+
+# 5. Coklu Zaman Serisi Gorsellestirme
+
+```{r}
+library(tidyr)
+df <- economics %>% select(date, psavert,uempmed) %>% 
+  gather(key = "variable", value = "value", -date)
+
+ggplot(df,aes(date,value)) + geom_line(aes(color=variable),size=1)
+```
+
+```{r}
+ggplot(df,aes(date,value)) + geom_area(aes(color=variable,fill=variable),
+                                       alpha = .5, position = position_dodge(0.8))
+                                      
+```
+
+# Uygulama
+
+```{r}
+mtcars
+diamonds
+```
+
+```{r}
+d <- diamonds
+summary(d)
+str(d)
+```
+
+```{r}
+ggplot(d,aes(price)) +
+  geom_histogram(bidwith = .5)
+
+d %>% group_by(cut) %>% summarise(n=n(),ort = mean(price)) 
+k <- d %>% group_by(color) %>% summarise(n=n(),ort = mean(price)) 
+d %>% group_by(clarity) %>% summarise(n=n(),ort = mean(price)) 
+
+ggplot(k,aes(color,ort)) + geom_bar(stat="identity",color = "black", fill ="orange")
+
+ggplot(d, aes(price,fill=color)) + 
+  geom_density()
+```
+

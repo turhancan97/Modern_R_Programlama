@@ -1,0 +1,152 @@
+---
+title: "R'da Tarih/Zaman ile Calismak"
+output: html_notebook
+---
+
+```{r}
+library(lubridate)
+today()
+now()
+```
+
+# 1. Tarih/Zaman Degiskenleri ile Basa Cikmak
+
+## 1.1 Editor ile veri okuturken tarih degiskenleri ile basa cikmak
+
+```{r}
+df_bir <- data.frame(yas=c(10,11,30),
+                     boy=c(120,140,160),
+                     dogum=c("20100201","20110522","20090430"))
+df_iki <- data.frame(yas=c(10,11,30),
+                     boy=c(120,140,160),
+                     dogum=c("2010_02_01","2011_05_22","2009_04_30"))
+df_uc <- data.frame(yas=c(10,11,30),
+                     boy=c(120,140,160),
+                     dogum=c("01022010","22052011","30042009"))
+df <- data.frame(df_bir,df_iki,df_uc)
+library(readr)
+
+write.csv(df,"df_csv")
+
+
+df_csv <- read_csv("df_csv", col_types = cols(dogum = col_date(format = "%Y%m%d"), 
+    dogum.1 = col_date(format = "%Y_%m_%d"), 
+    dogum.2 = col_date(format = "%d%m%Y")))
+str(df_csv)
+
+
+
+```
+
+## 1.2 String Ifadelerden Tarih/Zaman Olusturma
+
+```{r}
+library(lubridate)
+tarih <- "20180218"
+ymd(tarih)
+
+df_bir <- data.frame(yas=c(10,11,30),
+                     boy=c(120,140,160),
+                     dogum=c("20100201","20110522","20090430"))
+
+df_bir$dogum <- ymd(df_bir$dogum)
+df_bir
+
+mdy("02242018")
+dmy("22012018")
+ymd("2018_02_18")
+mdy("February 18st, 1989")
+
+ymd_hms("20120101 16:00:11")
+ymd_hm("20120101 16:10")
+ymd_h("20160102 16")
+
+```
+
+## 1.3 Degiskenler Uzerinden Olusturma
+
+```{r}
+install.packages("nycflights13")
+library(nycflights13)
+flights
+```
+
+```{r}
+library(magrittr)
+library(dplyr)
+flights %>% 
+  select(year,month,day,hour,minute)
+
+flights %>% 
+  select(year,month,day) %>%
+  mutate(tarih=make_date(year,month,day))
+
+flights %>% 
+  select(year,month,day,minute) %>%
+  mutate(tarih=make_datetime(year,month,day))
+
+```
+
+# 2. Tarih Zaman Bilesenleri
+
+```{r}
+t_s <- ymd_hms("20100222 13:45:00")
+
+year(t_s)
+
+month(t_s)
+
+day(t_s)
+
+mday(t_s)
+
+yday(t_s)
+
+wday(t_s)
+
+hour(t_s)
+
+minute(t_s)
+
+second(t_s)
+     
+```
+
+# 3. Zaman Araliklari
+
+## Saniye Cinsinden
+
+```{r}
+as.duration(1)
+
+dseconds(16)
+
+dminutes(10)
+
+dhours(10)
+
+ddays(1)
+
+dweeks(1)
+
+dyears(4)
+```
+
+## Gunluk Kullanim
+
+```{r}
+seconds(15)
+
+minutes(10)
+
+hours(45)
+
+days(7)
+
+months(1:6)
+
+weeks(1)
+
+years(1)
+```
+
